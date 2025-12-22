@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="icon" href="img/favicon.ico">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+        <a href="/" class="logo" data-route><h1>Erm</h1></a>
+
+        <nav class="header-bar">
+          <a href="/models" class="buttonHeadbar" data-route>MODELS</a>
+          <a href="/projects" class="buttonHeadbar" data-route="">PROJECTS</a>
+          <a href="/contact" class="buttonHeadbar" data-route>CONTACT</a>
+        </nav>
+
+        <nav class="lesser-header-bar">
+          <a href="#EN" class="buttonHeadbar">EN</a>
+          <a href="#PT-BR" class="buttonHeadbar">PT-BR</a>
+          <button class="buttonHeadbar">🌙</button>
+        </nav>
+  </header>
+
+  <!-- Main -->
+  <main>
+    <section id="main" class="main-text page-active">
+
+      <div class="contrast-text"> FEATURED </div>
+
+      <section id="main-bar" class="main-bar">
+        <section id="main-grid">
+          <div class="big-featured"></div>
+          <div class="big-featured"></div>
+        </section>
+
+        <section id="second-main-grid">
+          <div class="small-featured"></div>
+          <div class="small-featured"></div>
+          <div class="small-featured"></div>
+          <div class="small-featured"></div>
+        </section>
+      </section>
+      <div class="carpe-diem"> Carpe Diem! </div>
+    </section>
+
+    <!-- Página que mostra todos os projetos -->
+
+    <section id="projects" class="page-hidden">
+      <div id="projects-grid"> My Projects </div>
+    </section>
+
+    <!-- Página que mostra Projeto específico -->
+    <section id="project-view" class="page-hidden">
+      <div id="project-detailed"></div>
+    </section>
+
+    <!-- Página que mostra todos os models -->
+    <section id="models" class="page-hidden">
+      <div id="models-grid"></div>
+    </section>
+
+    <!-- Página que mostra Model específico -->
+    <section id="model-view" class="page-hidden"> 
+      <div id="model-detailed"></div>
+    </section>
+
+   <!-- Contact -->
+    <section id="contact" class="page-hidden">
+
+      <div class="contrast-text"> Discord-profile </div>
+
+      <div id="black-bar">
+        <div class="discord-profile"></div>    <!-- A ideia é de usar Lanyard API pra puxar meu perfil do discord depois. -->
+      </div>
+      
+      <div class="contrast-text"> Socials </div>
+      
+      <section id="black-bar">
+        <div id="contact-grid">
+          <a href="mailto:schiebenbus@gmail.com" class="contacts">Email</a>
+          <a href="https://github.com/M-Erm" class="contacts"> Github </a>
+          <a href="https://www.youtube.com/@7_Erm" class="contacts"> Youtube </a>
+          <a href="https://x.com/7_Erm_" class="contacts"> X </a>
+          <a href="https://sketchfab.com/M-erm" class="contacts"> Sketchfab </a>
+          <a href="https://www.linkedin.com/in/miguel-de-oliveira-nascimento-1ab018335/" class="contacts"> Linkedin </a>
+          <a href="https://steamcommunity.com/profiles/76561199192109224/" class="contacts"> Steam </a>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <script src="javascript.js" defer></script>
+</body>
+</html>
