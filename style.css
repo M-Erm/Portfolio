@@ -5,18 +5,14 @@
     box-sizing: border-box;
 }
 
-body {
-    background-color: #3A3A3A;
-}
-
 .logo {
     position: absolute;
     top: 45px;
     left: 100px;
     font-size: 20px;
-    color: white;
+    color: black;
     text-decoration: none;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid black;
 }
 
 .header-bar {
@@ -24,7 +20,8 @@ body {
     width: 440px;
     height: 43px;
     top: 55px;
-    background-color: #1414144D;
+    background-color: #141414;
+    opacity: 30%;
 
     border-radius: 55px;
     left: 60%;
@@ -39,7 +36,8 @@ body {
     width: 170px;
     height: 43px;
     top: 55px;
-    background-color: #1414144D;
+    background-color: #141414;
+    opacity: 30%;
 
     border-radius: 55px;
     left: 85%;
@@ -49,10 +47,8 @@ body {
     justify-content: space-around;
 }
 
-.buttonHeadbar {
+.headbar {
     display: flex;
-    width: 120px;
-    height: 30px;
     top: 60px; 
     border-radius: 10px;
     justify-content: center;
@@ -74,7 +70,7 @@ body {
 }
 
 main {
-    color: white;
+    color: black;
     width: 100;
     height: 100vh;
     display: flex;
@@ -90,9 +86,9 @@ main {
 
 .main-bar {
     display: flex;
-    width: 1920px;
+    width: 100vw;
     height: 350px;
-    background-color: gray;
+    background-color: #B0D2FF;
 }
 
 #main-grid {
@@ -133,6 +129,7 @@ main {
     align-items: center;
     font-size: 26px;
     font-weight: bold;
+    background-color: #D8D8D8;
 }
 
 .margin-text {
@@ -151,39 +148,42 @@ main {
 
 #projects-grid {
     display: grid;
-    align-items: center;
-    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-    max-width: 1000px;
-    height: 530px;
+    grid-template-columns: repeat(3, 1fr);
+    height: auto;
     padding: 40px;
-    padding-bottom: 70px;
-    gap: 50px 100px;
+    gap: 60px 60px;
     background-color: #363636;
     border: 1px solid black;
 }
 
 .card-project {
     display: flex;
+    justify-content: center;
+    align-items: center;
     width: 200px;
-    height: 195px;
-    border-radius: 15px;
-    text-align: center;
     flex-direction: column;
+    text-decoration: none;
 }
 
 .card-project img {
     width: 100%;
     height: 100%;
+    background-color: white;
+    color: transparent;
 }
 
 .card-project h3 {
     margin: 0;
     color: gray;
     position: relative;
-    top: 25px;
+    top: 20px;
 }
 
 /* Models */
+
+#models {
+    background-color: #8D2A72;
+}
 
 #models-grid {
     display: flex;
@@ -200,11 +200,13 @@ main {
     height: auto;
     text-align: center;
     flex-direction: column;
+    text-decoration: none;
 }
 
 .card-model img{
     background-color: white;
     border-radius: 15px;
+    color: transparent;
 }
 
 .card-model h3 {
@@ -213,24 +215,173 @@ main {
     padding: 30px
 }
 
+.advice {
+    display: flex;
+    position: absolute;
+    top: 730px;
+    left: 45px;
+    width: 590px;
+    height: 110px;
+    background-color: white;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.advice h1 {
+    font-weight: bold;
+    font-size: 14px;
+    padding-left: 10px;
+    color: black;
+}
+
 /* Specific Project */
 
-#project-view {
-    display: none;
+.background-view-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 600px;
+    background-color: #EDEDED;
+}
+
+#project-panel {
+    display: flex;
+    flex-direction: row;
+    width: 1000px;
+    height: 600px;
+    opacity: 1;
+    background-color: #323232;
+    border-radius: 10px;
+    border: 1px solid black;
+    overflow: hidden;
+}
+
+#project-info {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    flex: 0 0 35%;
+    padding: 20px;
+}
+
+.desc {
+    padding: 20px;
+    padding-bottom: 10px;
+}
+
+.panel-github {
+    display: flex;
+    justify-content: center;
+}
+
+.right-project-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1; /* Ocupa o espaço restante */
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.project-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.image-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 565px;
+    height: 335px;
+    background-color: white;
+}
+
+#project-images{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+#project-images img
+{
+    width: 135px;
+    height: 100px;
+    background-color: white;
+    object-fit: cover;
 }
 
 /* Specific Model */
 
-#model-view {
-    display: none;
+.showcase-model {
+    display: flex;
+    width: 650px;
+    height: 33vw;
+    background-color: white;
+    justify-content: center;
+    margin-right: 200px;
+}
+
+.showcase-model img {
+    border-radius: 15px;
+    color: transparent;
+}
+
+#model-info {
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+    height: 20vw;
+    background-color: #323232;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.model-info-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    margin-bottom: 40px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.model-info-desc {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-bottom: 140px;
+}
+
+.sketchfab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    max-width: 100px;
+    height: 33px;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 0 auto;
+    text-decoration: none;
+    background-color: #1F1F1F;
+    color: white;
 }
 
 /* Contact */
 
-#black-bar{
+#black-bar {
     display: flex;
-    width: 1920px;
-    height: 230px;
+    width: 100vw;
+    height: 210px;
     background-color: gray;
     align-items: center;
     border-bottom: solid white;
@@ -246,10 +397,11 @@ main {
 
 #contact-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     width: 600px;
-    height: 150px;
+    height: 140px;
     margin-left: 50px;
+    align-items: center;
 }
 
 .contacts {
@@ -263,3 +415,4 @@ main {
     justify-content: center;
     align-items: center;
 }
+

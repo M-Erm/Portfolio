@@ -1,5 +1,5 @@
 //  ==================================================
-// Carrega a lógica e os dados do Portfólio (:
+// Contém dados, carrega os cards de projetos e modelos no HTML e atualiza os links localmente.
 // ==================================================
 
 const projectsData = 
@@ -9,7 +9,14 @@ const projectsData =
         title: "Portfolio",
         stats: ["Finished"],
         techs: ["Html, CSS, JavaScript"],
-        image:"img/portfolio.png",
+        images:
+        {
+            card: "/img/portfolio-card.png",
+            img1: "/img/portfolio-1.png",
+            img2: "/img/portfolio-2.png",
+            img3: "/img/portfolio-3.png",
+            img4: "/img/portfolio-4.png"
+        },
         desc: "My Portfolio.",
         link: "https://github.com/M-Erm/Portfolio"
     },
@@ -18,7 +25,14 @@ const projectsData =
         title: "Project Manager",
         stats: ["In Development"],
         techs: ["Electron, SQLite, Html, CSS, JavaScript"],
-        image: "img/project-manager.png" ,
+        images: 
+        {
+            card: "/img/project-manager-card.png",
+            img1: "/img/project-manager-1.png",
+            img2: "/img/project-manager-2.png",
+            img3: "/img/project-manager-3.png",
+            img4: "/img/project-manager-4.png"
+        },
         desc: "A Project Manager.",
         link: "https://github.com/M-Erm/Project-Manager"
     },
@@ -27,8 +41,15 @@ const projectsData =
         title: "HoloParty",
         stats: ["In Development"],
         techs: ["Unity, Blender, C#"],
-        image: "img/holoparty.png",
-        desc: "A game.",
+        images:
+        {
+            card: "/img/holoparty-card.png",
+            img1: "/img/holoparty-1.png",
+            img2: "/img/holoparty-2.png",
+            img3: "/img/holoparty-3.png",
+            img4: "/img/holoparty-4.png"
+        },
+        desc: "HoloParty is A Co-op Multiplayer Hololive game.",
         link: ""
     },   
     {
@@ -36,7 +57,14 @@ const projectsData =
         title: "Minecraft Fabric Mod",
         stats: ["Archived"],
         techs: ["Java, Fabric API"],
-        image: "img/fabric-mod.png",
+        images: 
+        {
+            card: "/img/fabric-mod-card.png",
+            img1: "/img/fabric-mod-1.png",
+            img2: "/img/fabric-mod-2.png",
+            img3: "/img/fabric-mod-3.png",
+            img4: "/img/fabric-mod-4.png"
+        },
         desc: "A Minecraft 1.21.1 Fabric Mod.",
         link: "https://github.com/M-Erm/Fabric-Minecraft-Mod"
     },
@@ -45,9 +73,32 @@ const projectsData =
         title: "Minecraft Forge Mod",
         stats: ["Archived"],
         techs: ["Java, Forge API"],
-        image: "img/forge-mod.png",
+        images: 
+        {
+            card: "/img/forge-mod-card.png",
+            img1: "/img/forge-mod-1.png",
+            img2: "/img/forge-mod-2.png",
+            img3: "/img/forge-mod-3.png",
+            img4: "/img/forge-mod-4.png"
+        },
         desc: "A Minecraft 1.21.1 Forge Mod.",
         link: "https://github.com/M-Erm/Forge-MDK-Mod"
+    },
+    {
+        id: "project-06",
+        title: "Risk of Rain 2 Mod",
+        stats: ["In Development"],
+        techs: ["Unity, C#"],
+        images:
+        {
+            card: "/img/ror2-mod-card.png",
+            img1: "/img/ror2-mod-1.png",
+            img2: "/img/ror2-mod-2.png",
+            img3: "/img/ror2-mod-3.png",
+            img4: "/img/ror2-mod-4.png"
+        },
+        desc: "A Risk of Rain 2 Mod.",
+        link: ""
     }
 ]
 
@@ -55,66 +106,77 @@ const modelsData =
 [
     {
         id: "model-01",
-        name: "Fuwawa Abyssgard",
-        desc: "Fuwawa Abyssgard from Hololive. HoloParty 3D Model",
+        name: "Fuwawa Abyssgard [HoloParty]",
+        desc: "Unofficial Fuwawa Abyssgard - from Hololive. HoloParty 3D Model.",
+        sketchfab: "https://sketchfab.com/M-erm",
         images: 
         {
-            posed: "img/fuwawa-posed.png",
+            posed: "/img/fuwawa-posed.png",
         }
     },
     {
         id: "model-02",
-        name: "Mococo Abyssgard",
-        desc: "Mococo Abyssgard from Hololive. HoloParty 3D Model",
+        name: "Mococo Abyssgard [HoloParty]",
+        desc: "Unofficial Mococo Abyssgard - from Hololive. HoloParty 3D Model.",
+        sketchfab: "https://sketchfab.com/M-erm",
         images: 
         {
-            posed: "img/mococo-posed.png",
+            posed: "/img/mococo-posed.png",
+            img1: "/img/mococo-1.png",
+            img2: "/img/mococo-2.png",
+            img3: "/img/mococo-3.png",
+            img4: "/img/mococo-4.png",
         }
     }
 ]
 
-const routes = {
-    "/": "main",
-    "/projects": "projects",
-    "/models": "models",
-    "/contact": "contact",
-}
-
-const redirect = sessionStorage.redirect;
-if (redirect)
-{
-    sessionStorage.removeItem("redirect");
-    history.replaceState({}, "", redirect);
-}
+const BASE_PATH ="/Portfolio";
 
 const pages = document.querySelectorAll("main > section");
-const main_text = document.getElementById('main');
+const main_page = document.getElementById('main');
 
 window.addEventListener("popstate", () =>
 {
-    Navigate(window.location.pathname);
+    Navigate(window.location.pathname.replace(BASE_PATH, "") || "/");
 });
 
-document.addEventListener('click', (e) =>
+document.addEventListener("click", (e) =>
 {
     const link = e.target.closest("a[data-route]");
     if (!link) return;
 
     e.preventDefault();
 
-    const path = new URL(link.href).pathname;
+    const fullpath = new URL(link.href).pathname;
+    const path = fullpath.replace(BASE_PATH, "") || "/";
     Navigate(path);
 })
 
 function Navigate(path) // Remove página atual, cria nova 
 {
-    if (!path) path = "/";
-    if (!routes[path]) path = "/";
+    if (!path) path = "/"; //Se não existir ele vai pra home
 
-    if (window.location.pathname !== path)
-        history.pushState({},"", path);
+    const newUrl = BASE_PATH + path; // path é o /projects, fullpath é o /Portfolio/projects
+    if (window.location.pathname !== newUrl){ //
+        history.pushState({},"", newUrl);
+    }
 
-    const pageId = routes[path];
+    const parts = path.replace(/^\/+/, "").split("/"); //Divide o pageId em base e id, SE tiver ID, vai pro -view.
+    //const lang = parts[0]; //Linguagem
+    const base = parts[0] || ""; //sections
+    const id = parts[1] || null; //id específico
+
+    let pageId =  "main";
+
+    if (base ==="")  // Decide mostrar os projetos OU não. Esses if's sozinhos (se der id) não fazem nada. Se não tiver ID, vai mostrar os projetos.
+        pageId = "main"; // Esses if's são bons pra evitar mostrar o grid de projetos E os detalhes dos projetos.
+    else if (base ==="projects")
+        pageId = id ? "project-view" : "projects"; 
+    else if (base ==="models")
+        pageId = id ? "model-view" : "models";
+    else if (base ==="contact")
+        pageId = "contact";
+
 
     pages.forEach(page => 
     {
@@ -123,26 +185,28 @@ function Navigate(path) // Remove página atual, cria nova
     });
 
     const target = document.getElementById(pageId);
-
     if (target)
     {
         target.classList.remove('page-hidden');
         target.classList.add('page-active');
     }
 
-    if (pageId === "projects")
+    if (base === "projects")
     {
-        main_text.classList.add('page-hidden');
-        Load_Projects();
+        if (id)
+            Load_Details_Project(id);
+        else
+            Load_Projects();
     }
-    else if (pageId === "models")
+    if (base === "models")
     {
-        main_text.classList.add('page-hidden');
-        Load_Models();
+        if (id)
+            Load_Details_Models(id);
+        else
+            Load_Models();
     }
-    else if (pageId === "contact")
+    if (base === "contact")
     {
-        main_text.classList.add('page-hidden');
         Load_Contact();
     }
 }
@@ -151,15 +215,15 @@ function Navigate(path) // Remove página atual, cria nova
 function Load_Projects()
 {
     const projectGrid = document.getElementById('projects-grid');
-    projectGrid.innerHTML = ''; // Só pra ter certeza de que não tem nada dentro, sei lá html é esquisito
+    projectGrid.innerHTML = ""; // Só pra ter certeza de que não tem nada dentro, sei lá html é esquisito
 
     projectsData.forEach(project => 
     {
         const cardProject = `
-            <div class="card-project">
-                <img src="${project.image}" alt="${project.title} Preview">
+            <a href="/projects/${project.id}" class="card-project" data-route>
+                <img src="${project.images.card}" alt="${project.title} Preview">
                 <h3>${project.title} </h3>
-
+            </a>
         `;
         projectGrid.innerHTML += cardProject;
     });
@@ -169,49 +233,81 @@ function Load_Projects()
 function Load_Models()
 {
     const modelGrid = document.getElementById('models-grid');
-    modelGrid.innerHTML = '';
+    modelGrid.innerHTML = "";
 
-    modelsData.forEach(model => 
+    modelsData.forEach(model =>  //Card como seria no HTML
     {
-        const cardModel = `
-            <div class="card-model"> 
+        const cardModel = ` 
+            <a href="/models/${model.id}" class="card-model" data-route> 
                 <img src="${model.images.posed}" alt="${model.name} Preview">
                 <h3>${model.name}</h3>
+            </a>
         `;
         modelGrid.innerHTML += cardModel;  
     });
 }
 
-function Load_Details_Project()
+function Load_Details_Project(id)
 {
-    const urlHash = window.location.hash;
-    const projectId = urlHash.split(`?id=`)[1];
+    const projectInfo = document.getElementById("project-detailed");
+    projectInfo.innerHTML = "";
 
-    const projectFounded = projectsData.find(p => p.id === projectId);
+    const project = projectsData.find((project) => project.id === id);
 
-    if (projectFounded)
+    if (!project)
     {
-        const container = document.getElementById('project-detailed');
-        container.innerHTML = `
-        <h1>${projectFounded} </h1>
-        
-        `;
+        projectInfo.innerHTML = "<p>Projeto não existe?</p>";
+        return;
     }
+
+    const project_view = `
+        <div class="background-view-bar">
+            <div id= project-panel>
+                <div id="project-info">
+                    <div class="desc">About: ${project.desc} </div>
+                    <div>Techs: ${project.techs} </div>
+                    <a href="${project.link}" class="contacts">Github</a>
+                </div>
+                <div class= right-project-info>
+                    <div class="project-title">${project.title}</div>
+                    <div class= image-display></div>
+                    <section id="project-images">
+                        <img src="${project.images.img1}" alt="${project.title} Preview">
+                        <img src="${project.images.img2}" alt="${project.title} Preview">
+                        <img src="${project.images.img3}" alt="${project.title} Preview">
+                        <img src="${project.images.img4}" alt="${project.title} Preview">
+                    </section>
+                </div>
+            </div>
+        </div>
+    ` ;
+
+    projectInfo.innerHTML = project_view;
 }
 
-function Load_Details_Models()
+function Load_Details_Models(id)
 {
-    const urlHash = window.location.hash;
-    const modelId = urlHash.split(`?id=`)[1];
+    const modelInfo = document.getElementById("model-detailed");
+    modelInfo.innerHTML = "";
 
-    const modelFounded = modelsData.find(p => p.id === modelId);
+    const model = modelsData.find((model) => model.id === id)
 
-    if (modelFounded)
+    if (!model)
     {
-        const container = document.getElementById('model-detailed');
-        container.innerHTML = `
-        <h1>${modelFounded} </h1>
-        
-        `;
+        modelInfo.innerHTML = "<p>Modelo não existe?</p>";
+        return;
     }
+
+    const model_view = `
+        <div class="background-view-bar">
+            <div class="showcase-model"> <img src=${model.images.posed} alt=${model.name}> </div>
+            <section id="model-info">
+                <div class="model-info-name">${model.name}</div>
+                <div class="model-info-desc">About: ${model.desc}</div>
+                <a href="${model.sketchfab}" class="sketchfab">SketchFab</a>
+            </section>
+        </div>
+    `;
+
+    modelInfo.innerHTML = model_view;
 }
