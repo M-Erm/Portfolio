@@ -6,23 +6,42 @@ const projectsData =
 [
     {
         id: "project-01",
-        title: "Portfolio",
-        stats: ["Finished"],
-        techs: ["Html, CSS, JavaScript"],
+        title: "HoloParty",
+        category: "game",
+        stats: ["In Development"],
+        techs: ["Unity, Blender, C#"],
         images:
         {
-            card: "/img/portfolio-card.png",
-            img1: "/img/portfolio-1.png",
-            img2: "/img/portfolio-2.png",
-            img3: "/img/portfolio-3.png",
-            img4: "/img/portfolio-4.png"
+            card: "/img/holoparty-card.png",
+            img1: "/img/holoparty-1.png",
+            img2: "/img/holoparty-2.png",
+            img3: "/img/holoparty-3.png",
+            img4: "/img/holoparty-4.png"
         },
-        desc: "My Portfolio.",
-        link: "https://github.com/M-Erm/Portfolio"
+        desc: "HoloParty is A Co-op Multiplayer Hololive game.",
+        link: "https://github.com/M-Erm/"
     },
     {
         id: "project-02",
+        title: "Evil: Neuro’s Betrayal",
+        category: "game",
+        stats: ["In Development"],
+        techs: ["Unity, Blender, C#"],
+        images: 
+        {
+            card: "/img/Neuro-fight-card.png",
+            img1: "/img/Neuro-fight-1.png",
+            img2: "/img/Neuro-fight-2.png",
+            img3: "/img/Neuro-fight-3.png",
+            img4: "/img/Neuro-fight-4.png"
+        },
+        desc: "",
+        link: "https://github.com/M-Erm/"
+    },
+    {
+        id: "project-03",
         title: "Project Manager",
+        category: "miscellaneous",
         stats: ["In Development"],
         techs: ["Electron, SQLite, Html, CSS, JavaScript"],
         images: 
@@ -37,33 +56,18 @@ const projectsData =
         link: "https://github.com/M-Erm/Project-Manager"
     },
     {
-        id: "project-03",
-        title: "HoloParty",
-        stats: ["In Development"],
-        techs: ["Unity, Blender, C#"],
-        images:
-        {
-            card: "/img/holoparty-card.png",
-            img1: "/img/holoparty-1.png",
-            img2: "/img/holoparty-2.png",
-            img3: "/img/holoparty-3.png",
-            img4: "/img/holoparty-4.png"
-        },
-        desc: "HoloParty is A Co-op Multiplayer Hololive game.",
-        link: ""
-    },   
-    {
         id: "project-04",
         title: "Minecraft Fabric Mod",
+        category: "modding",
         stats: ["Archived"],
         techs: ["Java, Fabric API"],
         images: 
         {
-            card: "/img/fabric-mod-card.png",
-            img1: "/img/fabric-mod-1.png",
-            img2: "/img/fabric-mod-2.png",
-            img3: "/img/fabric-mod-3.png",
-            img4: "/img/fabric-mod-4.png"
+            card: "/img/fabric-card.png",
+            img1: "/img/fabric-1.png",
+            img2: "/img/fabric-2.png",
+            img3: "/img/fabric-3.png",
+            img4: "/img/fabric-4.png"
         },
         desc: "A Minecraft 1.21.1 Fabric Mod.",
         link: "https://github.com/M-Erm/Fabric-Minecraft-Mod"
@@ -71,15 +75,16 @@ const projectsData =
     {
         id: "project-05",
         title: "Minecraft Forge Mod",
+        category: "modding",
         stats: ["Archived"],
         techs: ["Java, Forge API"],
         images: 
         {
-            card: "/img/forge-mod-card.png",
-            img1: "/img/forge-mod-1.png",
-            img2: "/img/forge-mod-2.png",
-            img3: "/img/forge-mod-3.png",
-            img4: "/img/forge-mod-4.png"
+            card: "/img/forge-card.png",
+            img1: "/img/forge-1.png",
+            img2: "/img/forge-2.png",
+            img3: "/img/forge-3.png",
+            img4: "/img/forge-4.png"
         },
         desc: "A Minecraft 1.21.1 Forge Mod.",
         link: "https://github.com/M-Erm/Forge-MDK-Mod"
@@ -87,26 +92,79 @@ const projectsData =
     {
         id: "project-06",
         title: "Risk of Rain 2 Mod",
+        category: "modding",
         stats: ["In Development"],
         techs: ["Unity, C#"],
         images:
         {
-            card: "/img/ror2-mod-card.png",
-            img1: "/img/ror2-mod-1.png",
-            img2: "/img/ror2-mod-2.png",
-            img3: "/img/ror2-mod-3.png",
-            img4: "/img/ror2-mod-4.png"
+            card: "/img/ror2-card.png",
+            img1: "/img/ror2-1.png",
+            img2: "/img/ror2-2.png",
+            img3: "/img/ror2-3.png",
+            img4: "/img/ror2-4.png"
         },
         desc: "A Risk of Rain 2 Mod.",
+        link: "https://github.com/M-Erm/"
+    },
+    {
+        id: "project-07",
+        title: "Terraria Mod",
+        category: "modding",
+        stats: ["In Development"],
+        techs: ["Unity, C#"],
+        images:
+        {
+            card: "/img/terraria-card.png",
+            img1: "/img/terraria-1.png",
+            img2: "/img/terraria-2.png",
+            img3: "/img/terraria-3.png",
+            img4: "/img/terraria-4.png"
+        },
+        desc: "A Terraria Mod.",
+        link: "https://github.com/M-Erm/"
+    },
+    {
+        id: "project-08",
+        title: "C Calculator",
+        category: "college",
+        stats: ["Finished"],
+        techs: ["C"],
+        images:
+        {
+            card: "/img/CC-card.png",
+            img1: "/img/CC-1.png",
+            img2: "/img/CC-2.png",
+            img3: "/img/CC-3.png",
+            img4: "/img/CC-4.png"
+        },
+        desc: "A C Calculator.",
+        link: "https://github.com/M-Erm/"
+    },
+    {
+        id: "project-09",
+        title: "Java Calculator",
+        category: "college",
+        stats: ["Finished"],
+        techs: ["Java"],
+        images:
+        {
+            card: "/img/JC-card.png",
+            img1: "/img/JC-1.png",
+            img2: "/img/JC-2.png",
+            img3: "/img/JC-3.png",
+            img4: "/img/JC-4.png"
+        },
+        desc: "A Java Calculator.",
         link: ""
-    }
+    },
 ]
 
 const modelsData = 
 [
     {
         id: "model-01",
-        name: "Fuwawa Abyssgard [HoloParty]",
+        name: "Fuwawa Abyssgard",
+        category: "HoloParty",
         desc: "Unofficial Fuwawa Abyssgard - from Hololive. HoloParty 3D Model.",
         sketchfab: "https://sketchfab.com/M-erm",
         images: 
@@ -116,7 +174,8 @@ const modelsData =
     },
     {
         id: "model-02",
-        name: "Mococo Abyssgard [HoloParty]",
+        name: "Mococo Abyssgard",
+        category: "HoloParty",
         desc: "Unofficial Mococo Abyssgard - from Hololive. HoloParty 3D Model.",
         sketchfab: "https://sketchfab.com/M-erm",
         images: 
@@ -211,39 +270,57 @@ function Navigate(path) // Remove página atual, cria nova
     }
 }
 
-// Cria um card de projeto no html para cada projeto
-function Load_Projects()
+function Load_Projects() // Cria um card de projeto no html para cada projeto
 {
-    const projectGrid = document.getElementById('projects-grid');
-    projectGrid.innerHTML = ""; // Só pra ter certeza de que não tem nada dentro, sei lá html é esquisito
-
-    projectsData.forEach(project => 
+    const projects = // Array 
     {
-        const cardProject = `
+        Game: document.querySelector('#projects-games .projects-grid'),
+        Modding: document.querySelector('#projects-modding .projects-grid'),
+        Miscellaneous: document.querySelector('#projects-misc .projects-grid'),
+        College: document.querySelector('#projects-college .projects-grid')
+    }
+
+    function createProjectCard(project) {
+        return `
             <a href="/projects/${project.id}" class="card-project" data-route>
                 <img src="${project.images.card}" alt="${project.title} Preview">
                 <h3>${project.title} </h3>
             </a>
         `;
-        projectGrid.innerHTML += cardProject;
+    }
+
+    Object.keys(projects).forEach(category => {  //Object.keys pega as Chaves (game, modding, etc) e foreach percorre elas e filtra 
+        const filteredProjects = projectsData.filter(project => project.category === category.toLowerCase()); //Compara o valor da CHAVE de um array com o nome do outro
+
+        filteredProjects.forEach(project => {
+            projects[category].innerHTML += createProjectCard(project);
+        });
     });
 }
 
-// Cria um card de modelo no html para cada modelo
-function Load_Models()
+function Load_Models() // Pega os grids do HTML; cria uma função molde pra evitar repetição; Filtra: Valor de Model.category comparado com nome da Chave Category e chama func.
 {
-    const modelGrid = document.getElementById('models-grid');
-    modelGrid.innerHTML = "";
-
-    modelsData.forEach(model =>  //Card como seria no HTML
+    const models = //Array
     {
-        const cardModel = ` 
+        HoloParty: document.querySelector('#models-holoparty .models-grid'),
+        Miscellaneous: document.querySelector("#models-misc .misc-models-grid")
+    }
+
+    function createModelCard(model) { 
+        return ` 
             <a href="/models/${model.id}" class="card-model" data-route> 
                 <img src="${model.images.posed}" alt="${model.name} Preview">
                 <h3>${model.name}</h3>
             </a>
         `;
-        modelGrid.innerHTML += cardModel;  
+    }
+
+    Object.keys(models).forEach(category =>{ //Faz 2 coisas diferentes: Object.keys retorna array de chaves, foreach filtra cada chave e filteredModels tem algo tipo Games = games
+        const filteredModels = modelsData.filter(model => model.category.toLowerCase() === category.toLowerCase());
+
+        filteredModels.forEach(model => {
+            models[category].innerHTML += createModelCard(model);
+        });
     });
 }
 
