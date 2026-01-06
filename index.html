@@ -48,12 +48,22 @@
         </div>
       </section>
 
-      <div class="carpe-diem"> Carpe Diem! </div>
+      <div class="centered-text"> Carpe Diem! </div>
 
-      <div> Q/A</div>
-      <div> Q: Do you Have A Job Preference?<br> A: Yes. Programming, but I would totally work with 3D!</div>
-      <div> Q: Since When do you program?<br> A: Since I was 15-16.</div>
-      <div> Q: What Languages do you speak?<br> A: Portuguese, English, Japanese and Spanish.</div>
+      <section id="qasection">
+
+        <div class="qatext"> Q/A</div>
+
+        <section id="qa">
+          <div class="question"> Q: Do you Have A Job Preference? </div>
+          <div class="answer">A: Yes. Programming, but I would totally work with 3D!</div>
+          <div class="question"> Q: Since When do you program? </div>
+          <div class="answer"> A: Since I was 15-16.</div>
+          <div class="question"> Q: What Languages do you speak? </div>
+          <div class="answer">A: Portuguese, English, Japanese and Spanish.</div>
+        </section>
+      </section>
+      
     </section>
 
     <!-- Página que mostra todos os projetos -->
@@ -62,24 +72,18 @@
 
       <div class="big-display"></div>
 
-      <section id="projects-games" class="background-bar"> <div class="name-project-bar"> Games </div> <div class="projects-grid"></div> </section>
-      <section id="projects-modding" class="background-bar"> <div class="name-project-bar"> Game Modding </div> <div class="projects-grid"></div> </section>
-      <section id="projects-misc" class="background-bar"> <div class="name-project-bar"> Miscellaneous </div> <div class="projects-grid"></div> </section>
-      <section id="projects-college" class="background-bar"> <div class="name-project-bar"> College </div> <div class="projects-grid"></div> </section>
-    </section>
-
-    <!-- Página que mostra Projeto específico -->
-    <section id="project-view" class="page-hidden">
-      <div id="project-detailed"></div>
+      <section id="projects-games" class="background-bar"> <div class="name-project-bar"> <h1> Games </h1> </div> <div class="projects-grid"></div> </section>
+      <section id="projects-modding" class="background-bar"> <div class="name-project-bar"> <h1> Game Modding </h1> </div> <div class="projects-grid"></div> </section>
+      <section id="projects-misc" class="background-bar"> <div class="name-project-bar"> <h1> Miscellaneous </h1> </div> <div class="projects-grid"></div> </section>
+      <section id="projects-college" class="background-bar"> <div class="name-project-bar"> <h1> College </h1> </div> <div class="projects-grid"></div> </section>
     </section>
 
     <!-- Página que mostra todos os models -->
     <section id="models" class="page-hidden">
       <div class="big-display"></div>
 
-      <section id="models-holoparty" class="background-bar">
-        <div class="models-grid"></div>
-        <div class="advice"><h1>HoloParty Models Disclaimer<br>
+      <section id="models-holoparty" class="background-bar"> <div class="model-section-title"> HoloParty </div> <div class="models-grid"></div> <div class="advice">
+        <h1>HoloParty Models Disclaimer<br>
           All rights to the original characters and intellectual property belong to COVER Corp.<br>
           These models are not officially affiliated with  Hololive Production or COVER Corp. <br>
           The models are created for use in HoloParty, an independent fan-made game project.<br>
@@ -87,28 +91,30 @@
         </div>
       </section>
 
-      <section id="models-misc" class="background-bar"> <div class="misc-models-grid"></div> </section>
+      <section id="models-misc" class="background-bar"> <div class="model-section-title"> Miscellaneous </div> <div class="misc-models-grid"></div> </section>
     </section>
 
+    <!-- Página que mostra Projeto específico -->
+    <section id="project-view" class="page-hidden"> </section>
+
     <!-- Página que mostra Model específico -->
-    <section id="model-view" class="page-hidden"> 
-      <div id="model-detailed"></div>
-    </section>
+    <section id="model-view" class="page-hidden"> </section>
 
    <!-- Contact -->
     <section id="contact" class="page-hidden">
 
       <div class="big-display"></div>
 
-      <div class="contrast-text"> About</div>
-
-      <div id="black-bar">
-        <div class="discord-profile"></div>    <!-- A ideia é de usar Lanyard API pra puxar meu perfil do discord depois. -->
+      <div id="about" class="background-bar">
+        <h1> Who Am I </h1>
+        <img src="/img/profile-pic.png" alt="Profile picture">
+        <p> I am a Software Engineering Student who likes Game Development, 3D Modeling and Animation.Made my first Hello World when I was 15 years old.</p>
       </div>
       
-      <div class="contrast-text"> SNS </div>
-      
-      <section id="black-bar">
+      <section id="sns" class="background-bar">
+
+        <div class="sns"> Official SNS </div>
+
         <div id="contact-grid">
           <a href="mailto:schiebenbus@gmail.com" class="contacts">Email</a>
           <a href="https://github.com/M-Erm" class="contacts"> Github </a>
@@ -119,7 +125,9 @@
           <a href="https://steamcommunity.com/profiles/76561199192109224/" class="contacts"> Steam </a>
         </div>
       </section>
+
     </section>
+
   </main>
 
   <script src="javascript.js" defer></script>

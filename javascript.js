@@ -170,6 +170,10 @@ const modelsData =
         images: 
         {
             posed: "/img/fuwawa-posed.png",
+            img1: "/img/fuwawa-1.png",
+            img2: "/img/fuwawa-2.png",
+            img3: "/img/fuwawa-3.png",
+            img4: "/img/fuwawa-4.png",
         }
     },
     {
@@ -185,6 +189,21 @@ const modelsData =
             img2: "/img/mococo-2.png",
             img3: "/img/mococo-3.png",
             img4: "/img/mococo-4.png",
+        }
+    },
+    {
+        id: "model-03",
+        name: "Evil Neuro",
+        category: "Miscellaneous",
+        desc: "Unofficial Evil Neuro. Evil: Neuro's Betrayal 3D Model.",
+        sketchfab: "https://sketchfab.com/M-erm",
+        images: 
+        {
+            posed: "/img/evil-posed.png",
+            img1: "/img/evil-1.png",
+            img2: "/img/evil-2.png",
+            img3: "/img/evil-3.png",
+            img4: "/img/evil-4.png",
         }
     }
 ]
@@ -237,11 +256,14 @@ function Navigate(path) // Remove página atual, cria nova
         pageId = "contact";
 
 
-    pages.forEach(page => 
+    pages.forEach(page =>  //Limpeza visual
     {
         page.classList.remove('page-active');
         page.classList.add('page-hidden');
     });
+
+    document.getElementById("project-view").innerHTML = ""; //Limpeza de dentro :thumbsup:
+    document.getElementById("model-view").innerHTML = "";
 
     const target = document.getElementById(pageId);
     if (target)
@@ -280,6 +302,12 @@ function Load_Projects() // Cria um card de projeto no html para cada projeto
         College: document.querySelector('#projects-college .projects-grid')
     }
 
+    const cards = document.querySelectorAll(".card-project");
+
+    cards.forEach(card => {
+        card.remove();
+    });
+
     function createProjectCard(project) {
         return `
             <a href="/projects/${project.id}" class="card-project" data-route>
@@ -306,6 +334,13 @@ function Load_Models() // Pega os grids do HTML; cria uma função molde pra evi
         Miscellaneous: document.querySelector("#models-misc .misc-models-grid")
     }
 
+    
+    const cards = document.querySelectorAll(".card-model");
+
+    cards.forEach(card => {
+        card.remove();
+    });
+
     function createModelCard(model) { 
         return ` 
             <a href="/models/${model.id}" class="card-model" data-route> 
@@ -326,7 +361,7 @@ function Load_Models() // Pega os grids do HTML; cria uma função molde pra evi
 
 function Load_Details_Project(id)
 {
-    const projectInfo = document.getElementById("project-detailed");
+    const projectInfo = document.getElementById("project-view");
     projectInfo.innerHTML = "";
 
     const project = projectsData.find((project) => project.id === id);
@@ -338,23 +373,21 @@ function Load_Details_Project(id)
     }
 
     const project_view = `
-        <div class="background-view-bar">
-            <div id= project-panel>
-                <div id="project-info">
-                    <div class="desc">About: ${project.desc} </div>
-                    <div>Techs: ${project.techs} </div>
-                    <a href="${project.link}" class="contacts">Github</a>
-                </div>
-                <div class= right-project-info>
-                    <div class="project-title">${project.title}</div>
-                    <div class= image-display></div>
-                    <section id="project-images">
-                        <img src="${project.images.img1}" alt="${project.title} Preview">
-                        <img src="${project.images.img2}" alt="${project.title} Preview">
-                        <img src="${project.images.img3}" alt="${project.title} Preview">
-                        <img src="${project.images.img4}" alt="${project.title} Preview">
-                    </section>
-                </div>
+        <div id="project-panel">
+            <div id="project-info">
+                <div class="desc">About: ${project.desc} </div>
+                <div>Techs: ${project.techs} </div>
+                <a href="${project.link}" class="contacts">Github</a>
+            </div>
+            <div class="right-project-info>
+                <div class="project-title"> ${project.title} </div>
+                <div class="image-display"></div>
+                <section id="project-images">
+                    <img src="${project.images.img1}" alt="${project.title} Preview">
+                    <img src="${project.images.img2}" alt="${project.title} Preview">
+                    <img src="${project.images.img3}" alt="${project.title} Preview">
+                    <img src="${project.images.img4}" alt="${project.title} Preview">
+                </section>
             </div>
         </div>
     ` ;
@@ -364,7 +397,7 @@ function Load_Details_Project(id)
 
 function Load_Details_Models(id)
 {
-    const modelInfo = document.getElementById("model-detailed");
+    const modelInfo = document.getElementById("model-view");
     modelInfo.innerHTML = "";
 
     const model = modelsData.find((model) => model.id === id)
@@ -376,14 +409,12 @@ function Load_Details_Models(id)
     }
 
     const model_view = `
-        <div class="background-view-bar">
-            <div class="showcase-model"> <img src=${model.images.posed} alt=${model.name}> </div>
-            <section id="model-info">
-                <div class="model-info-name">${model.name}</div>
-                <div class="model-info-desc">About: ${model.desc}</div>
-                <a href="${model.sketchfab}" class="sketchfab">SketchFab</a>
-            </section>
-        </div>
+        <div class="showcase-model"> <img src=${model.images.posed} alt=${model.name}> </div>
+        <section id="model-info">
+            <div class="model-info-name">${model.name}</div>
+            <div class="model-info-desc">About: ${model.desc}</div>
+            <a href="${model.sketchfab}" class="sketchfab">SketchFab</a>
+        </section>
     `;
 
     modelInfo.innerHTML = model_view;
