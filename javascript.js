@@ -2,6 +2,35 @@
 // Contém dados, carrega os cards de projetos e modelos no HTML e atualiza os links localmente.
 // ==================================================
 
+const translations = {
+
+    "en": {
+        models: "MODELS",
+        projects: "PROJECTS",
+        contact: "CONTACT",
+        whoami: "Who Am I",
+        officialsns: "Official SNS",
+        disclaimer: "HoloParty Models Disclaimer All rights to the original characters and intellectual property belong to COVER Corp. These models are not officially affiliated with  Hololive Production or COVER Corp. The models are created for use in HoloParty, an independent fan-made game project. This projects are not an official Hololive product.",
+        miscellaneous: "Miscellaneous",
+        games: "Games",
+        gamemodding: "Game Modding",
+        college: "College",
+    },
+
+    "pt-br": {
+        models: "MODELOS",
+        projects: "PROJETOS",
+        contact: "CONTATO",
+        whoami: "Quem sou eu?",
+        officialsns: "Redes Oficiais",
+        disclaimer: "Aviso Legal",
+        miscellaneous: "Variados",
+        games: "Jogos",
+        gamemodding: "Modificação de Jogos",
+        college: "Faculdade",
+    }
+};
+
 const projectsData = 
 [
     {
@@ -12,11 +41,11 @@ const projectsData =
         techs: ["Unity, Blender, C#"],
         images:
         {
-            card: "/img/holoparty-card.png",
-            img1: "/img/holoparty-1.png",
-            img2: "/img/holoparty-2.png",
-            img3: "/img/holoparty-3.png",
-            img4: "/img/holoparty-4.png"
+            card: "img/holoparty-card.png",
+            img1: "img/holoparty-1.png",
+            img2: "img/holoparty-2.png",
+            img3: "img/holoparty-3.png",
+            img4: "img/holoparty-4.png"
         },
         desc: "HoloParty is A Co-op Multiplayer Hololive game.",
         link: "https://github.com/M-Erm/"
@@ -29,11 +58,11 @@ const projectsData =
         techs: ["Unity, Blender, C#"],
         images: 
         {
-            card: "/img/Neuro-fight-card.png",
-            img1: "/img/Neuro-fight-1.png",
-            img2: "/img/Neuro-fight-2.png",
-            img3: "/img/Neuro-fight-3.png",
-            img4: "/img/Neuro-fight-4.png"
+            card: "img/Neuro-fight-card.png",
+            img1: "img/Neuro-fight-1.png",
+            img2: "img/Neuro-fight-2.png",
+            img3: "img/Neuro-fight-3.png",
+            img4: "img/Neuro-fight-4.png"
         },
         desc: "",
         link: "https://github.com/M-Erm/"
@@ -46,11 +75,11 @@ const projectsData =
         techs: ["Electron, SQLite, Html, CSS, JavaScript"],
         images: 
         {
-            card: "/img/project-manager-card.png",
-            img1: "/img/project-manager-1.png",
-            img2: "/img/project-manager-2.png",
-            img3: "/img/project-manager-3.png",
-            img4: "/img/project-manager-4.png"
+            card: "img/project-manager-card.png",
+            img1: "img/project-manager-1.png",
+            img2: "img/project-manager-2.png",
+            img3: "img/project-manager-3.png",
+            img4: "img/project-manager-4.png"
         },
         desc: "A Project Manager.",
         link: "https://github.com/M-Erm/Project-Manager"
@@ -63,11 +92,11 @@ const projectsData =
         techs: ["Java, Fabric API"],
         images: 
         {
-            card: "/img/fabric-card.png",
-            img1: "/img/fabric-1.png",
-            img2: "/img/fabric-2.png",
-            img3: "/img/fabric-3.png",
-            img4: "/img/fabric-4.png"
+            card: "img/fabric-card.png",
+            img1: "img/fabric-1.png",
+            img2: "img/fabric-2.png",
+            img3: "img/fabric-3.png",
+            img4: "img/fabric-4.png"
         },
         desc: "A Minecraft 1.21.1 Fabric Mod.",
         link: "https://github.com/M-Erm/Fabric-Minecraft-Mod"
@@ -80,11 +109,11 @@ const projectsData =
         techs: ["Java, Forge API"],
         images: 
         {
-            card: "/img/forge-card.png",
-            img1: "/img/forge-1.png",
-            img2: "/img/forge-2.png",
-            img3: "/img/forge-3.png",
-            img4: "/img/forge-4.png"
+            card: "img/forge-card.png",
+            img1: "img/forge-1.png",
+            img2: "img/forge-2.png",
+            img3: "img/forge-3.png",
+            img4: "img/forge-4.png"
         },
         desc: "A Minecraft 1.21.1 Forge Mod.",
         link: "https://github.com/M-Erm/Forge-MDK-Mod"
@@ -97,11 +126,11 @@ const projectsData =
         techs: ["Unity, C#"],
         images:
         {
-            card: "/img/ror2-card.png",
-            img1: "/img/ror2-1.png",
-            img2: "/img/ror2-2.png",
-            img3: "/img/ror2-3.png",
-            img4: "/img/ror2-4.png"
+            card: "img/ror2-card.png",
+            img1: "img/ror2-1.png",
+            img2: "img/ror2-2.png",
+            img3: "img/ror2-3.png",
+            img4: "img/ror2-4.png"
         },
         desc: "A Risk of Rain 2 Mod.",
         link: "https://github.com/M-Erm/"
@@ -114,11 +143,11 @@ const projectsData =
         techs: ["Unity, C#"],
         images:
         {
-            card: "/img/terraria-card.png",
-            img1: "/img/terraria-1.png",
-            img2: "/img/terraria-2.png",
-            img3: "/img/terraria-3.png",
-            img4: "/img/terraria-4.png"
+            card: "img/terraria-card.png",
+            img1: "img/terraria-1.png",
+            img2: "img/terraria-2.png",
+            img3: "img/terraria-3.png",
+            img4: "img/terraria-4.png"
         },
         desc: "A Terraria Mod.",
         link: "https://github.com/M-Erm/"
@@ -131,11 +160,11 @@ const projectsData =
         techs: ["C"],
         images:
         {
-            card: "/img/CC-card.png",
-            img1: "/img/CC-1.png",
-            img2: "/img/CC-2.png",
-            img3: "/img/CC-3.png",
-            img4: "/img/CC-4.png"
+            card: "img/CC-card.png",
+            img1: "img/CC-1.png",
+            img2: "img/CC-2.png",
+            img3: "img/CC-3.png",
+            img4: "img/CC-4.png"
         },
         desc: "A C Calculator.",
         link: "https://github.com/M-Erm/"
@@ -148,11 +177,11 @@ const projectsData =
         techs: ["Java"],
         images:
         {
-            card: "/img/JC-card.png",
-            img1: "/img/JC-1.png",
-            img2: "/img/JC-2.png",
-            img3: "/img/JC-3.png",
-            img4: "/img/JC-4.png"
+            card: "img/JC-card.png",
+            img1: "img/JC-1.png",
+            img2: "img/JC-2.png",
+            img3: "img/JC-3.png",
+            img4: "img/JC-4.png"
         },
         desc: "A Java Calculator.",
         link: ""
@@ -169,11 +198,11 @@ const modelsData =
         sketchfab: "https://sketchfab.com/M-erm",
         images: 
         {
-            posed: "/img/fuwawa-posed.png",
-            img1: "/img/fuwawa-1.png",
-            img2: "/img/fuwawa-2.png",
-            img3: "/img/fuwawa-3.png",
-            img4: "/img/fuwawa-4.png",
+            posed: "img/fuwawa-posed.png",
+            img1: "img/fuwawa-1.png",
+            img2: "img/fuwawa-2.png",
+            img3: "img/fuwawa-3.png",
+            img4: "img/fuwawa-4.png",
         }
     },
     {
@@ -184,11 +213,11 @@ const modelsData =
         sketchfab: "https://sketchfab.com/M-erm",
         images: 
         {
-            posed: "/img/mococo-posed.png",
-            img1: "/img/mococo-1.png",
-            img2: "/img/mococo-2.png",
-            img3: "/img/mococo-3.png",
-            img4: "/img/mococo-4.png",
+            posed: "img/mococo-posed.png",
+            img1: "img/mococo-1.png",
+            img2: "img/mococo-2.png",
+            img3: "img/mococo-3.png",
+            img4: "img/mococo-4.png",
         }
     },
     {
@@ -199,11 +228,11 @@ const modelsData =
         sketchfab: "https://sketchfab.com/M-erm",
         images: 
         {
-            posed: "/img/evil-posed.png",
-            img1: "/img/evil-1.png",
-            img2: "/img/evil-2.png",
-            img3: "/img/evil-3.png",
-            img4: "/img/evil-4.png",
+            posed: "img/evil-posed.png",
+            img1: "img/evil-1.png",
+            img2: "img/evil-2.png",
+            img3: "img/evil-3.png",
+            img4: "img/evil-4.png",
         }
     }
 ]
@@ -211,43 +240,42 @@ const modelsData =
 const BASE_PATH ="/Portfolio";
 
 const pages = document.querySelectorAll("main > section");
-const main_page = document.getElementById('main');
+const main_page = document.getElementById('homepage');
 
-window.addEventListener("popstate", () =>
+
+window.addEventListener("popstate", () => //Faz com que a seta de voltar FUNCIONE
 {
-    Navigate(window.location.pathname.replace(BASE_PATH, "") || "/");
+    Navigate(window.location.pathname.replace(BASE_PATH, "")); //Pega o path da URL atual, remove a primeira parte e chama navigate
 });
 
-document.addEventListener("click", (e) =>
+document.addEventListener("click", (click) =>
 {
-    const link = e.target.closest("a[data-route]");
+    const link = click.target.closest("a[data-route]"); // Retorna um link completo
     if (!link) return;
 
-    e.preventDefault();
+    click.preventDefault();
 
-    const fullpath = new URL(link.href).pathname;
-    const path = fullpath.replace(BASE_PATH, "") || "/";
+    const path = link.getAttribute("href");
     Navigate(path);
 })
 
-function Navigate(path) // Remove página atual, cria nova 
+function Navigate(path) // Remove página atual, cria nova
 {
-    if (!path) path = "/"; //Se não existir ele vai pra home
+    path = path || ""; // Outra forma de dizer: If null = ""
+    path = path.replace(/^\/+/, ""); // Limpa as barras
 
-    const newUrl = BASE_PATH + path; // path é o /projects, fullpath é o /Portfolio/projects
-    if (window.location.pathname !== newUrl){ //
+    const newUrl = path ? `${BASE_PATH}/${path}` : BASE_PATH; // Tem path? se sim, monta url com path, se não, sem path
+    
+    if (window.location.pathname !== newUrl){ 
         history.pushState({},"", newUrl);
     }
 
-    const parts = path.replace(/^\/+/, "").split("/"); //Divide o pageId em base e id, SE tiver ID, vai pro -view.
-    //const lang = parts[0]; //Linguagem
-    const base = parts[0] || ""; //sections
-    const id = parts[1] || null; //id específico
+    const parts = path.split("/"); //Divide o pageId em base e id, SE tiver ID, vai pro project/model-view.
+    const base = parts[0] || "";
+    const id = parts[1] || null;
 
-    let pageId =  "main";
-
-    if (base ==="")  // Decide mostrar os projetos OU não. Esses if's sozinhos (se der id) não fazem nada. Se não tiver ID, vai mostrar os projetos.
-        pageId = "main"; // Esses if's são bons pra evitar mostrar o grid de projetos E os detalhes dos projetos.
+    if (base ==="")  // Dá valor ao pageId de acordo com o valor recebido. Se tiver id, mostra a página COM O ID haha
+        pageId = "homepage";
     else if (base ==="projects")
         pageId = id ? "project-view" : "projects"; 
     else if (base ==="models")
@@ -262,7 +290,7 @@ function Navigate(path) // Remove página atual, cria nova
         page.classList.add('page-hidden');
     });
 
-    document.getElementById("project-view").innerHTML = ""; //Limpeza de dentro :thumbsup:
+    document.getElementById("project-view").innerHTML = ""; //Limpeza interna :thumbsup:
     document.getElementById("model-view").innerHTML = "";
 
     const target = document.getElementById(pageId);
@@ -272,7 +300,7 @@ function Navigate(path) // Remove página atual, cria nova
         target.classList.add('page-active');
     }
 
-    if (base === "projects")
+    if (base === "projects") 
     {
         if (id)
             Load_Details_Project(id);
@@ -310,7 +338,7 @@ function Load_Projects() // Cria um card de projeto no html para cada projeto
 
     function createProjectCard(project) {
         return `
-            <a href="/projects/${project.id}" class="card-project" data-route>
+            <a href="projects/${project.id}" class="card-project" data-route>
                 <img src="${project.images.card}" alt="${project.title} Preview">
                 <h3>${project.title} </h3>
             </a>
@@ -343,7 +371,7 @@ function Load_Models() // Pega os grids do HTML; cria uma função molde pra evi
 
     function createModelCard(model) { 
         return ` 
-            <a href="/models/${model.id}" class="card-model" data-route> 
+            <a href="models/${model.id}" class="card-model" data-route> 
                 <img src="${model.images.posed}" alt="${model.name} Preview">
                 <h3>${model.name}</h3>
             </a>
@@ -374,12 +402,12 @@ function Load_Details_Project(id)
 
     const project_view = `
         <div id="project-panel">
-            <div id="project-info">
+            <section id="project-info">
                 <div class="desc">About: ${project.desc} </div>
                 <div>Techs: ${project.techs} </div>
                 <a href="${project.link}" class="contacts">Github</a>
-            </div>
-            <div class="right-project-info>
+            </section>
+            <section id="right-project-info">
                 <div class="project-title"> ${project.title} </div>
                 <div class="image-display"></div>
                 <section id="project-images">
@@ -388,7 +416,7 @@ function Load_Details_Project(id)
                     <img src="${project.images.img3}" alt="${project.title} Preview">
                     <img src="${project.images.img4}" alt="${project.title} Preview">
                 </section>
-            </div>
+            </section>
         </div>
     ` ;
 
@@ -409,6 +437,12 @@ function Load_Details_Models(id)
     }
 
     const model_view = `
+        <section id="model-images">
+            <img src="${model.images.img1}" alt="${model.name} Preview">
+            <img src="${model.images.img1}" alt="${model.name} Preview">
+            <img src="${model.images.img3}" alt="${model.name} Preview">
+            <img src="${model.images.img4}" alt="${model.name} Preview">
+        </section>
         <div class="showcase-model"> <img src=${model.images.posed} alt=${model.name}> </div>
         <section id="model-info">
             <div class="model-info-name">${model.name}</div>
@@ -419,3 +453,8 @@ function Load_Details_Models(id)
 
     modelInfo.innerHTML = model_view;
 }
+
+window.addEventListener("DOMContentLoaded", () => {
+    const currentPath = window.location.pathname.replace(BASE_PATH, "");
+    Navigate(currentPath);
+});

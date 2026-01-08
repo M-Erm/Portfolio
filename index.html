@@ -5,80 +5,82 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio</title>
   <link rel="icon" href="img/favicon.ico">
+  <base href="/Portfolio">
   <link rel="stylesheet" href="style.css">
+  <script src="javascript.js" defer></script>
 </head>
 
 <body>
   <header>
-        <a href="/" class="logo" data-route><h1>Erm</h1></a>
+        <a href="" class="logo" data-route><h1>Erm</h1></a>
+        <nav class =header-container>
+          <nav class="header-bar">
+            <a href="models" class="headerbar-element" data-route>MODELS</a>
+            <a href="projects" class="headerbar-element" data-route="">PROJECTS</a>
+            <a href="contact" class="headerbar-element" data-route>CONTACT</a>
+          </nav>
 
-        <nav class="header-bar">
-          <a href="/models" class="headbar" data-route>MODELS</a>
-          <a href="/projects" class="headbar" data-route="">PROJECTS</a>
-          <a href="/contact" class="headbar" data-route>CONTACT</a>
-        </nav>
-
-        <nav class="lesser-header-bar">
-          <a href="/EN" class="headbar">EN</a>
-          <a href="/PT-BR" class="headbar">PT-BR</a>
-          <button class="headbar">🌙</button>
+          <nav class="lesser-header-bar">
+            <a href="/EN" class="headerbar-element">EN</a>
+            <a href="/PT-BR" class="headerbar-element">PT-BR</a>
+            <button class="headerbar-element">🌙</button>
+          </nav>
         </nav>
   </header>
 
-  <!-- Main -->
   <main>
-    <section id="main" class="main-text page-active">
+    <section id="homepage" class="page-active">
 
       <div class="big-display"></div>
 
-      <section id="main-bar" class="main-bar">
+      <section id="main-bar" class="background-bar">
 
         <div class="contrast-text"> FEATURED </div>
+
         <div class="grids-container">
-          <section id="main-grid">
+          <div id="main-grid">
             <div class="big-featured"></div>
             <div class="big-featured"></div>
-          </section>
-          <section id="second-main-grid">
+          </div>
+          <div id="second-main-grid">
             <div class="small-featured"></div>
             <div class="small-featured"></div>
             <div class="small-featured"></div>
             <div class="small-featured"></div>
-          </section>
+          </div>
         </div>
       </section>
 
-      <div class="centered-text"> Carpe Diem! </div>
+      <h2 class="centered-text"> Carpe Diem! </h2>
 
-      <section id="qasection">
+      <section id="qapanel">
 
-        <div class="qatext"> Q/A</div>
+        <h1 class="qatext"> Q/A</h1>
 
-        <section id="qa">
-          <div class="question"> Q: Do you Have A Job Preference? </div>
+        <div id="qa">
+          <div class="question"> Q: Do you Have A Job Preference?  </div>
           <div class="answer">A: Yes. Programming, but I would totally work with 3D!</div>
           <div class="question"> Q: Since When do you program? </div>
-          <div class="answer"> A: Since I was 15-16.</div>
+          <div class="answer"> A: Made my first program using python when I was 15 years old.</div>
           <div class="question"> Q: What Languages do you speak? </div>
           <div class="answer">A: Portuguese, English, Japanese and Spanish.</div>
-        </section>
+        </div>
       </section>
       
     </section>
 
-    <!-- Página que mostra todos os projetos -->
-
+    <!-- Seção que mostra todos os projetos -->
     <section id="projects" class="page-hidden">
 
       <div class="big-display"></div>
 
-      <section id="projects-games" class="background-bar"> <div class="name-project-bar"> <h1> Games </h1> </div> <div class="projects-grid"></div> </section>
-      <section id="projects-modding" class="background-bar"> <div class="name-project-bar"> <h1> Game Modding </h1> </div> <div class="projects-grid"></div> </section>
-      <section id="projects-misc" class="background-bar"> <div class="name-project-bar"> <h1> Miscellaneous </h1> </div> <div class="projects-grid"></div> </section>
-      <section id="projects-college" class="background-bar"> <div class="name-project-bar"> <h1> College </h1> </div> <div class="projects-grid"></div> </section>
+      <section id="projects-games" class="background-bar"> <div class="section-project-name-bar"> <h1> Games </h1> </div> <div class="projects-grid"></div> </section>
+      <section id="projects-modding" class="background-bar"> <div class="section-project-name-bar"> <h1> Game Modding </h1> </div> <div class="projects-grid"></div> </section>
+      <section id="projects-misc" class="background-bar"> <div class="section-project-name-bar"> <h1> Miscellaneous </h1> </div> <div class="projects-grid"></div> </section>
+      <section id="projects-college" class="background-bar"> <div class="section-project-name-bar"> <h1> College </h1> </div> <div class="projects-grid"></div> </section>
     </section>
 
-    <!-- Página que mostra todos os models -->
+    <!-- Seção que mostra todos os models -->
     <section id="models" class="page-hidden">
       <div class="big-display"></div>
 
@@ -94,22 +96,25 @@
       <section id="models-misc" class="background-bar"> <div class="model-section-title"> Miscellaneous </div> <div class="misc-models-grid"></div> </section>
     </section>
 
-    <!-- Página que mostra Projeto específico -->
+    <!-- Seção que mostra Projeto específico -->
     <section id="project-view" class="page-hidden"> </section>
 
-    <!-- Página que mostra Model específico -->
+    <!-- Seção que mostra Model específico -->
     <section id="model-view" class="page-hidden"> </section>
 
-   <!-- Contact -->
+   <!-- SNS -->
     <section id="contact" class="page-hidden">
 
       <div class="big-display"></div>
-
-      <div id="about" class="background-bar">
+      
+      <section id="about" class="background-bar">
         <h1> Who Am I </h1>
-        <img src="/img/profile-pic.png" alt="Profile picture">
-        <p> I am a Software Engineering Student who likes Game Development, 3D Modeling and Animation.Made my first Hello World when I was 15 years old.</p>
-      </div>
+
+        <div class="about-info"> 
+          <img src="/img/profile-pic.jpg" alt="Profile picture" id="profile-pic">
+          <p> I am a Software Engineering Student who likes Game Development, 3D Modeling and Animation. <br> Made my first Hello World when I was 15 years old.</p>
+        </div>
+      </section>
       
       <section id="sns" class="background-bar">
 
@@ -123,13 +128,12 @@
           <a href="https://sketchfab.com/M-erm" class="contacts"> Sketchfab </a>
           <a href="https://www.linkedin.com/in/miguel-de-oliveira-nascimento-1ab018335/" class="contacts"> Linkedin </a>
           <a href="https://steamcommunity.com/profiles/76561199192109224/" class="contacts"> Steam </a>
+          <a href="https://schie.itch.io/ " class="contacts"> Itch.io </a>
         </div>
       </section>
 
     </section>
 
   </main>
-
-  <script src="javascript.js" defer></script>
 </body>
 </html>
