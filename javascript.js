@@ -314,10 +314,6 @@ function Navigate(path) // Remove página atual, cria nova
         else
             Load_Models();
     }
-    if (base === "contact")
-    {
-        Load_Contact();
-    }
 }
 
 function Load_Projects() // Cria um card de projeto no html para cada projeto
@@ -431,29 +427,29 @@ function Load_Details_Models(id)
     const model = modelsData.find((model) => model.id === id)
 
     if (!model)
-    {
-        modelInfo.innerHTML = "<p>Modelo não existe?</p>";
         return;
-    }
 
     const model_view = `
-        <section id="model-images">
-            <img src="${model.images.img1}" alt="${model.name} Preview">
-            <img src="${model.images.img1}" alt="${model.name} Preview">
-            <img src="${model.images.img3}" alt="${model.name} Preview">
-            <img src="${model.images.img4}" alt="${model.name} Preview">
-        </section>
-        <div class="showcase-model"> <img src=${model.images.posed} alt=${model.name}> </div>
-        <section id="model-info">
-            <div class="model-info-name">${model.name}</div>
-            <div class="model-info-desc">About: ${model.desc}</div>
-            <a href="${model.sketchfab}" class="sketchfab">SketchFab</a>
-        </section>
+        <div id="model-view-container" class="background-bar">
+            <section id="model-images">
+                <img src="${model.images.img1}" alt="${model.name} Preview">
+                <img src="${model.images.img2}" alt="${model.name} Preview">
+                <img src="${model.images.img3}" alt="${model.name} Preview">
+                <img src="${model.images.img4}" alt="${model.name} Preview">
+            </section>
+            <div class="twod-model"> <img src=${model.images.posed} alt=${model.name}> </div>
+            <section id="model-info">
+                <div class="model-info-name">${model.name}</div>
+                <div class="model-info-desc">About: ${model.desc}</div>
+                <a href="${model.sketchfab}" class="sketchfab">SketchFab</a>
+            </section>
+        </div>
     `;
 
     modelInfo.innerHTML = model_view;
 }
 
+// Aparentemente só funciona localmente
 window.addEventListener("DOMContentLoaded", () => {
     const currentPath = window.location.pathname.replace(BASE_PATH, "");
     Navigate(currentPath);
