@@ -14,21 +14,22 @@
         <a href="" class="logo" data-route><h1>Erm</h1></a>
         <nav class =header-container>
           <nav class="header-bar">
-            <a href="/models" class="headerbar-element" data-route>MODELS</a>
-            <a href="projects" class="headerbar-element" data-route="">PROJECTS</a>
-            <a href="contact" class="headerbar-element" data-route>CONTACT</a>
+            <a href="models" class="headerbar-element" data-route data-i18n="models">MODELS</a>
+            <a href="projects" class="headerbar-element" data-route data-i18n="projects">PROJECTS</a>
+            <a href="animations" class="headerbar-element" data-route data-i18n="animations">ANIMATIONS</a>
+            <a href="contact" class="headerbar-element" data-route data-i18n="contact">CONTACT</a>
           </nav>
 
           <nav class="lesser-header-bar">
-            <a href="/EN" class="headerbar-element">EN</a>
-            <a href="/PT-BR" class="headerbar-element">PT-BR</a>
+            <button onclick="changeURLLanguage('en')" class="headerbar-element">EN</button>
+            <button onclick="changeURLLanguage('pt-br')" class="headerbar-element">PT-BR</button>
             <button class="headerbar-element">🌙</button>
           </nav>
         </nav>
   </header>
 
   <main>
-
+    <!-- Homepage -->
     <section id="homepage" class="page-active">
   
       <section class="top">
@@ -44,7 +45,7 @@
         </div>
       </section>
 
-      <section id="main-bar" class="background-bar">
+      <section id="main-bar">
 
         <div class="contrast-text"> FEATURED </div>
 
@@ -80,7 +81,7 @@
       
     </section>
 
-    <!-- Seção que mostra todos os projetos -->
+    <!-- Projetos -->
     <section id="projects" class="page-hidden">
 
       <section class="top">
@@ -96,13 +97,13 @@
         </div>
       </section>
 
-      <section id="projects-games" class="background-bar"> <div class="section-project-name-bar"> <h1> Games </h1> </div> <div class="projects-grid"></div> </section>
-      <section id="projects-modding" class="background-bar"> <div class="section-project-name-bar"> <h1> Game Modding </h1> </div> <div class="projects-grid"></div> </section>
-      <section id="projects-misc" class="background-bar"> <div class="section-project-name-bar"> <h1> Miscellaneous </h1> </div> <div class="projects-grid"></div> </section>
-      <section id="projects-college" class="background-bar"> <div class="section-project-name-bar"> <h1> College </h1> </div> <div class="projects-grid"></div> </section>
+      <section id="projects-games"> <div class="section-project-name-bar"> <h1> Games </h1> </div> <div class="projects-grid"></div> </section>
+      <section id="projects-modding"> <div class="section-project-name-bar"> <h1> Game Modding </h1> </div> <div class="projects-grid"></div> </section>
+      <section id="projects-misc"> <div class="section-project-name-bar"> <h1> Miscellaneous </h1> </div> <div class="projects-grid"></div> </section>
+      <section id="projects-college"> <div class="section-project-name-bar"> <h1> College </h1> </div> <div class="projects-grid"></div> </section>
     </section>
 
-    <!-- Seção que mostra todos os models -->
+    <!-- Models -->
     <section id="models" class="page-hidden">
 
       <section class="top">
@@ -118,27 +119,34 @@
         </div>
       </section>
 
-      <section id="models-holoparty" class="background-bar"> <div class="model-section-title"> HoloParty </div> <div class="models-grid"></div> <div class="advice">
-        <h1>HoloParty Models Disclaimer<br>
-          All rights to the original characters and intellectual property belong to COVER Corp.<br>
-          These models are not officially affiliated with  Hololive Production or COVER Corp. <br>
-          The models are created for use in HoloParty, an independent fan-made game project.<br>
-          This projects are not an official Hololive product.<br></h1>
+      <section id="models-holoparty"> <div class="model-section-title"> HoloParty </div> <ul class="models-grid" style="transform: translate3d(0px, 0px, 0px);"></ul> 
+        <div class="advice">
+          <h1>HoloParty Models Disclaimer<br>
+            All rights to the original characters and intellectual property belong to COVER Corp.<br>
+            These models are not officially affiliated with  Hololive Production or COVER Corp. <br>
+            The models are created for use in HoloParty, an independent fan-made game project.<br>
+            This projects are not an official Hololive product.<br></h1>
         </div>
         
       </section>
 
-      <section id="models-misc" class="background-bar"> <div class="model-section-title"> Miscellaneous </div> <div class="misc-models-grid"></div> </section>
+      <section id="models-misc"> <div class="model-section-title"> Miscellaneous </div> <ul class="models-grid"></ul> </section>
 
     </section>
 
-    <!-- Seção que mostra Projeto específico -->
+    <!-- Projeto específico -->
     <section id="project-view" class="page-hidden"> </section>
 
-    <!-- Seção que mostra Model específico -->
+    <!-- Model específico -->
     <section id="model-view" class="page-hidden"> </section>
 
-   <!-- SNS -->
+    <!-- Advinha? animação né burro -->
+    <section id="animations" class="page-hidden">
+
+      <div style="text-align: center; color: red ;"><h1>YOU SHOULDN'T BE HERE, GET OUT!</h1></div>
+    </section>
+
+   <!-- Contact && SNS -->
     <section id="contact" class="page-hidden">
 
       <section class="top">
@@ -154,7 +162,7 @@
         </div>
       </section>
       
-      <section id="about" class="background-bar">
+      <section id="about">
         <h1> Who Am I </h1>
 
         <div class="about-info"> 
@@ -163,7 +171,7 @@
         </div>
       </section>
       
-      <section id="sns" class="background-bar">
+      <section id="sns">
 
         <div class="sns"> Official SNS </div>
 

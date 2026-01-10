@@ -20,7 +20,7 @@ main {
 
 .logo {
     position: fixed;
-    top: 1.5%;
+    top: 2%;
     left: 5%;
     font-size: clamp(0.5rem, 2vw, 1rem);
     text-decoration: none;
@@ -57,8 +57,9 @@ main {
 .lesser-header-bar {
     height: 2.4rem;
     top: 1.25rem;
+    gap: 1rem;
     background-color: rgba(20, 20, 20, 0.3);
-    padding: 15px 15px 15px 15px;
+    padding: 15px;
     border-radius: 55px;
 
     display: flex;
@@ -173,7 +174,6 @@ video#bgvid {
 #qapanel {
     display: flex;
     margin: 60px auto;
-    justify-self: center;
     align-items: center;
     max-width: 1000px;
     border-radius: 15px;
@@ -215,17 +215,13 @@ video#bgvid {
 
 /* All Projects */
 
-.background-bar {
-    width: 100%;
-}
-
 .section-project-name-bar {
     display: flex;
-    width: 50%;
+    width: 40%;
     max-width: 800px;
-    height: auto;
     margin-top: 2%;
     margin-bottom: 2%;
+    padding: 5px;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     background-color: rgb(161 161 161 / 0.5);
@@ -299,10 +295,10 @@ video#bgvid {
     display: flex;
     color: white;
     font-weight: bold;
-    padding: 15px;
-    margin-left: 8vw;
+    padding: 10px;
+    margin-bottom: 2vw;
     font-size: 2.25rem;
-    align-self: flex-start;
+    align-self: center;
     margin-top: 2vh;
 }
 
@@ -310,49 +306,103 @@ video#bgvid {
     background-color: #F2AADF;
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 #models-misc {
     background-color: #9F8DBE;
     display: flex;
     flex-direction: column;
-    align-items: center;
+}
+
+ul {
+    list-style: none;
 }
 
 .models-grid {
+    position: relative;
     display: flex;
-    flex-wrap: wrap;
-    gap: 3vw;
-    padding: 0 4vw;
+    margin-right: auto;
+    margin-bottom: 2vw;
+    padding: 0 50px 0 100px;
+    width: 100%;
+    z-index: 1;
+    list-style: none;
+    overflow: visible;
 }
 
 .card-model {
-    display: flex;
-    width: 15vw;
-    flex-direction: column;
-    text-align: center;
-    text-decoration: none;
-}
-
-.card-model img{
-    width: 100%;
+    width: 15%;
+    height: 25vw;
+    margin-right: 1%;
     background-color: white;
     border-radius: 15px;
-    color: transparent;
+    position: relative;
 }
 
-.card-model h3 {
-    margin: 0;
-    color: white;
-    padding: 3vh;
+.card-model:hover figure img {
+    transform: translate(-50%, -50%) scale(1.2);
+}
+
+.card-model a {
+    display: block;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    outline: none;
+}
+
+.img-box {
+    position: absolute;
+    width: 100%;
+    height: 120%;
+    left: 0vw !important;
+    top: -10% !important;
+    z-index: 0;
+    overflow: hidden;
+}
+
+figure {
+    position: relative;
+    width: 100%;
+    height: 90%;
+    left: 0vw !important;
+    top: 4% !important;
+    z-index: 0;
+    line-height: 0;
+}
+
+figure img {
+    width: auto;
+    max-width: inherit;
+    height: auto;
+    max-height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(1.0);
+    transition: .2s ease-out;
+    aspect-ratio: auto 925 / 1440;
+}
+
+.model-name {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    color: #333;
+    font-weight: bold;
+    text-align: center;
+    width: 90%;
 }
 
 .advice {
     display: flex;
     justify-content: flex-start;
     align-self: flex-start;
-    padding: 0 3vw 20px;
+    padding: 0 2vw 15px;
 }
 
 .advice h1 {
@@ -362,6 +412,14 @@ video#bgvid {
 }
 
 /* Specific Project */
+
+#project-view-container {
+    display: flex;
+    width: 100%;
+    background-color: #D3D3D3;
+    justify-content: center;
+    align-items: center;
+}
 
 #project-view.page-active {
     display: flex;
@@ -377,7 +435,6 @@ video#bgvid {
     background-color: #A1A1A1;
     border: 1px solid black;
     padding: 15px;
-    margin-bottom: 5vh;
 }
 
 #project-info {
@@ -434,22 +491,21 @@ video#bgvid {
 /* Specific Model */
 
 #model-images {
-    display: flex;
-    gap: 3.5rem;
-    flex-direction: column;
-    padding: 25px;
+    width: clamp(3.5%, 10%, 4%);
+    gap: 4rem;
+    padding-right: 25px;
 }
 
 #model-images img {
     width: 100%;
     height: 100%;
+    border-radius: 5px;
     background-color: #A1A1A1;
     object-fit: cover; 
 }
 
 #model-view.page-active {
     display: flex;
-    justify-content: center;
     align-items: center;
     min-height: 100vh;
 }
@@ -464,9 +520,24 @@ video#bgvid {
 
 .twod-model {
     display: flex;
-    width: clamp(200px, 25%, 350px);
+    width: clamp(200px, 25%, 325px);
+    height: 50vh;
     background-color: #A1A1A1;
     border-radius: 15px;
+}
+
+.view-3d-model {
+    position: fixed;
+    margin: 18px;
+    width: fit-content;
+    height: fit-content;
+    padding: 6px 16px;
+    border-radius: 5px;
+    background-color: #1F1F1F;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
 }
 
 .twod-model img {
@@ -478,17 +549,19 @@ video#bgvid {
 
 #model-info {
     display: flex;
+    align-items: center;
     flex-direction: column;
-    width: 90%;
-    max-width: 500px;
-    min-height: 400px;
+    max-width: 400px;
+    height: 40vh;
     margin-left: 10%;
     background-color: #A1A1A1;
     border-radius: 10px;
     border: 1px solid black;
+    color: white;
 }
 
 .model-info-name {
+    margin: 20px;
     text-align: center;
     font-size: 24px;
     font-weight: bold;
@@ -496,14 +569,16 @@ video#bgvid {
 
 .model-info-desc {
     font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.model-info-about {
+    margin-bottom: 60%;
 }
 
 .sketchfab {
-    display: inline-block;
-    text-align: center;
-    max-width: 100px;
-    height: 33px;
-    padding: 10px 20px;
+    padding: 2%;
+    font-size: 16px;
     border-radius: 5px;
     text-decoration: none;
     background-color: #1F1F1F;
@@ -767,7 +842,7 @@ video#bgvid {
     }
     
     .top-display {
-        height: 50vh;
+        height: 46vw;
         margin-bottom: 8vw;
     }
     
@@ -945,7 +1020,7 @@ video#bgvid {
     }
     
     .top-display {
-        height: 40vh;
+        height: 46vw;
     }
     
     #main-bar {

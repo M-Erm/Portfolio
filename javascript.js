@@ -7,6 +7,7 @@ const translations = {
     "en": {
         models: "MODELS",
         projects: "PROJECTS",
+        animations: "ANIMATIONS",
         contact: "CONTACT",
         whoami: "Who Am I",
         officialsns: "Official SNS",
@@ -41,14 +42,14 @@ const projectsData =
         techs: ["Unity, Blender, C#"],
         images:
         {
-            card: "img/holoparty-card.png",
-            img1: "img/holoparty-1.png",
-            img2: "img/holoparty-2.png",
-            img3: "img/holoparty-3.png",
-            img4: "img/holoparty-4.png"
+            card: "img/holoparty/holoparty-card.jpg",
+            img1: "img/holoparty/holoparty-1.jpg",
+            img2: "img/holoparty/holoparty-2.jpg",
+            img3: "img/holoparty/holoparty-3.jpg",
+            img4: "img/holoparty/holoparty-4.jpg"
         },
-        desc: "HoloParty is A Co-op Multiplayer Hololive game.",
-        link: "https://github.com/M-Erm/"
+        desc: "HoloParty is A Co-op Multiplayer Unofficial Hololive game.",
+        link: "Not Open Source"
     },
     {
         id: "project-02",
@@ -58,14 +59,14 @@ const projectsData =
         techs: ["Unity, Blender, C#"],
         images: 
         {
-            card: "img/Neuro-fight-card.png",
-            img1: "img/Neuro-fight-1.png",
-            img2: "img/Neuro-fight-2.png",
-            img3: "img/Neuro-fight-3.png",
-            img4: "img/Neuro-fight-4.png"
+            card: "img/evilgame/evil-card.png",
+            img1: "img/evilgame/evil-1.png",
+            img2: "img/evilgame/evil-2.png",
+            img3: "img/evilgame/evil-3.png",
+            img4: "img/evilgame/evil-4.png"
         },
-        desc: "",
-        link: "https://github.com/M-Erm/"
+        desc: "Evil: Neuro's Betrayal is an Unofficial Evil-Neuro's game.",
+        link: "Not Open Source"
     },
     {
         id: "project-03",
@@ -75,11 +76,11 @@ const projectsData =
         techs: ["Electron, SQLite, Html, CSS, JavaScript"],
         images: 
         {
-            card: "img/project-manager-card.png",
-            img1: "img/project-manager-1.png",
-            img2: "img/project-manager-2.png",
-            img3: "img/project-manager-3.png",
-            img4: "img/project-manager-4.png"
+            card: "img/projectmanager/project-manager-card.png",
+            img1: "img/projectmanager/project-manager-1.png",
+            img2: "img/projectmanager/project-manager-2.png",
+            img3: "img/projectmanager/project-manager-3.png",
+            img4: "img/projectmanager/project-manager-4.png"
         },
         desc: "A Project Manager.",
         link: "https://github.com/M-Erm/Project-Manager"
@@ -92,11 +93,11 @@ const projectsData =
         techs: ["Java, Fabric API"],
         images: 
         {
-            card: "img/fabric-card.png",
-            img1: "img/fabric-1.png",
-            img2: "img/fabric-2.png",
-            img3: "img/fabric-3.png",
-            img4: "img/fabric-4.png"
+            card: "img/fabricmod/fabric-mod-card.png",
+            img1: "img/fabricmod/fabric-1.png",
+            img2: "img/fabricmod/fabric-2.png",
+            img3: "img/fabricmod/fabric-3.png",
+            img4: "img/fabricmod/fabric-4.png"
         },
         desc: "A Minecraft 1.21.1 Fabric Mod.",
         link: "https://github.com/M-Erm/Fabric-Minecraft-Mod"
@@ -109,11 +110,11 @@ const projectsData =
         techs: ["Java, Forge API"],
         images: 
         {
-            card: "img/forge-card.png",
-            img1: "img/forge-1.png",
-            img2: "img/forge-2.png",
-            img3: "img/forge-3.png",
-            img4: "img/forge-4.png"
+            card: "img/forgemod/forge-mod-card.png",
+            img1: "img/forgemod/forge-1.png",
+            img2: "img/forgemod/forge-2.png",
+            img3: "img/forgemod/forge-3.png",
+            img4: "img/forgemod/forge-4.png"
         },
         desc: "A Minecraft 1.21.1 Forge Mod.",
         link: "https://github.com/M-Erm/Forge-MDK-Mod"
@@ -126,11 +127,11 @@ const projectsData =
         techs: ["Unity, C#"],
         images:
         {
-            card: "img/ror2-card.png",
-            img1: "img/ror2-1.png",
-            img2: "img/ror2-2.png",
-            img3: "img/ror2-3.png",
-            img4: "img/ror2-4.png"
+            card: "img/ror2/ror2-mod-card.png",
+            img1: "img/ror2/ror2-1.png",
+            img2: "img/ror2/ror2-2.png",
+            img3: "img/ror2/ror2-3.png",
+            img4: "img/ror2/ror2-4.png"
         },
         desc: "A Risk of Rain 2 Mod.",
         link: "https://github.com/M-Erm/"
@@ -143,11 +144,11 @@ const projectsData =
         techs: ["Unity, C#"],
         images:
         {
-            card: "img/terraria-card.png",
-            img1: "img/terraria-1.png",
-            img2: "img/terraria-2.png",
-            img3: "img/terraria-3.png",
-            img4: "img/terraria-4.png"
+            card: "img/terraria/terraria-card.png",
+            img1: "img/terraria/terraria-1.png",
+            img2: "img/terraria/terraria-2.png",
+            img3: "img/terraria/terraria-3.png",
+            img4: "img/terraria/terraria-4.png"
         },
         desc: "A Terraria Mod.",
         link: "https://github.com/M-Erm/"
@@ -167,24 +168,24 @@ const projectsData =
             img4: "img/CC-4.png"
         },
         desc: "A C Calculator.",
-        link: "https://github.com/M-Erm/"
+        link: "https://github.com/M-Erm/Calculadora-C"
     },
     {
         id: "project-09",
-        title: "Java Calculator",
+        title: "Python Statistics",
         category: "college",
         stats: ["Finished"],
-        techs: ["Java"],
+        techs: ["Python, pandas, matplotlb"],
         images:
         {
-            card: "img/JC-card.png",
-            img1: "img/JC-1.png",
-            img2: "img/JC-2.png",
-            img3: "img/JC-3.png",
-            img4: "img/JC-4.png"
+            card: "img/statistics/statistics-card.png",
+            img1: "img/statistics/statistics-1.png",
+            img2: "img/statistics/statistics-2.png",
+            img3: "img/statistics/statistics-3.png",
+            img4: "img/statistics/statistics-4.png"
         },
-        desc: "A Java Calculator.",
-        link: ""
+        desc: "College Statistics Project developed in Python (silly one)",
+        link: "https://github.com/M-Erm/1P-Estatistica"
     },
 ]
 
@@ -194,15 +195,16 @@ const modelsData =
         id: "model-01",
         name: "Fuwawa Abyssgard",
         category: "HoloParty",
-        desc: "Unofficial Fuwawa Abyssgard - from Hololive. HoloParty 3D Model.",
+        desc: "Unofficial Fuwawa Abyssgard - from Hololive.",
+        about: "This model was created as a Holoparty 3D asset.",
         sketchfab: "https://sketchfab.com/M-erm",
         images: 
         {
-            posed: "img/fuwawa-posed.png",
-            img1: "img/fuwawa-1.png",
-            img2: "img/fuwawa-2.png",
-            img3: "img/fuwawa-3.png",
-            img4: "img/fuwawa-4.png",
+            posed: "img/fuwawa/fuwawa-posed.png",
+            img1: "img/fuwawa/fuwawa-1.png",
+            img2: "img/fuwawa/fuwawa-2.png",
+            img3: "img/fuwawa/fuwawa-3.png",
+            img4: "img/fuwawa/fuwawa-4.png",
         }
     },
     {
@@ -213,26 +215,86 @@ const modelsData =
         sketchfab: "https://sketchfab.com/M-erm",
         images: 
         {
-            posed: "img/mococo-posed.png",
-            img1: "img/mococo-1.png",
-            img2: "img/mococo-2.png",
-            img3: "img/mococo-3.png",
-            img4: "img/mococo-4.png",
+            posed: "img/mococo/mococo-posed.png",
+            img1: "img/mococo/mococo-1.png",
+            img2: "img/mococo/mococo-2.png",
+            img3: "img/mococo/mococo-3.png",
+            img4: "img/mococo/mococo-4.png",
         }
     },
     {
         id: "model-03",
+        name: "Shiori Novella",
+        category: "HoloParty",
+        desc: "Unofficial Shiori Novella - from Hololive. HoloParty 3D Model.",
+        sketchfab: "https://sketchfab.com/M-erm",
+        images: 
+        {
+            posed: "img/shiori/shiori-posed.png",
+            img1: "img/shiori/shiori-1.png",
+            img2: "img/shiori/shiori-2.png",
+            img3: "img/shiori/shiori-3.png",
+            img4: "img/shiori/shiori-4.png",
+        }
+    },
+    {
+        id: "model-04",
+        name: "Koseki Bijou",
+        category: "HoloParty",
+        desc: "Unofficial Koseki Bijou - from Hololive. HoloParty 3D Model.",
+        sketchfab: "https://sketchfab.com/M-erm",
+        images: 
+        {
+            posed: "img/biboo/biboo-posed.png",
+            img1: "img/biboo/biboo-1.png",
+            img2: "img/biboo/biboo-2.png",
+            img3: "img/biboo/biboo-3.png",
+            img4: "img/biboo/biboo-4.png",
+        }
+    },
+    {
+        id: "model-05",
+        name: "PlaceHolder",
+        category: "HoloParty",
+        desc: "Unofficial PlaceHolder - from Hololive. HoloParty 3D Model.",
+        sketchfab: "https://sketchfab.com/M-erm",
+        images: 
+        {
+            posed: "img/placeholder/placeholder-posed.png",
+            img1: "img/placeholder/placeholder-1.png",
+            img2: "img/placeholder/placeholder-2.png",
+            img3: "img/placeholder/placeholder-3.png",
+            img4: "img/placeholder/placeholder-4.png",
+        }
+    },
+    {
+        id: "model-06",
+        name: "PlaceHolder",
+        category: "HoloParty",
+        desc: "Unofficial PlaceHolder - from Hololive. HoloParty 3D Model.",
+        sketchfab: "https://sketchfab.com/M-erm",
+        images: 
+        {
+            posed: "img/placeholder/placeholder-posed.png",
+            img1: "img/placeholder/placeholder-1.png",
+            img2: "img/placeholder/placeholder-2.png",
+            img3: "img/placeholder/placeholder-3.png",
+            img4: "img/placeholder/placeholder-4.png",
+        }
+    },
+    {
+        id: "model-07",
         name: "Evil Neuro",
         category: "Miscellaneous",
         desc: "Unofficial Evil Neuro. Evil: Neuro's Betrayal 3D Model.",
         sketchfab: "https://sketchfab.com/M-erm",
         images: 
         {
-            posed: "img/evil-posed.png",
-            img1: "img/evil-1.png",
-            img2: "img/evil-2.png",
-            img3: "img/evil-3.png",
-            img4: "img/evil-4.png",
+            posed: "img/evil/evil-posed.png",
+            img1: "img/evil/evil-1.png",
+            img2: "img/evil/evil-2.png",
+            img3: "img/evil/evil-3.png",
+            img4: "img/evil/evil-4.png",
         }
     }
 ]
@@ -264,17 +326,17 @@ function Navigate(path) // Remove página atual, cria nova
     path = path || ""; // Outra forma de dizer: If null = ""
     path = path.replace(/^\/+/, ""); // Limpa as barras
 
-    const newUrl = path ? `${BASE_PATH}/${path}` : BASE_PATH; // Tem path? se sim, monta url com path, se não, sem path
+    const fullUrl = path ? `${BASE_PATH}/${path}` : BASE_PATH; // Tem path? se sim, monta url com path, se não, sem path
     
-    if (window.location.pathname !== newUrl){ 
-        history.pushState({},"", newUrl);
+    if (window.location.pathname !== fullUrl){ 
+        history.pushState({},"", fullUrl);
     }
 
-    const parts = path.split("/"); //Divide o pageId em base e id, SE tiver ID, vai pro project/model-view.
+    const parts = path.split("/"); // Divide o pageId em base e id
     const base = parts[0] || "";
     const id = parts[1] || null;
 
-    if (base ==="")  // Dá valor ao pageId de acordo com o valor recebido. Se tiver id, mostra a página COM O ID haha
+    if (base ==="")  // Dá valor ao pageId de acordo com o valor recebido. Útil para dar o page-hidden depois
         pageId = "homepage";
     else if (base ==="projects")
         pageId = id ? "project-view" : "projects"; 
@@ -282,25 +344,28 @@ function Navigate(path) // Remove página atual, cria nova
         pageId = id ? "model-view" : "models";
     else if (base ==="contact")
         pageId = "contact";
+    else if (base ==="animations")
+        pageId = "animations";
 
 
-    pages.forEach(page =>  //Limpeza visual
+    pages.forEach(page =>
     {
         page.classList.remove('page-active');
         page.classList.add('page-hidden');
     });
 
-    document.getElementById("project-view").innerHTML = ""; //Limpeza interna :thumbsup:
+    document.getElementById("project-view").innerHTML = "";
     document.getElementById("model-view").innerHTML = "";
 
     const target = document.getElementById(pageId);
-    if (target)
+
+    if (target) 
     {
         target.classList.remove('page-hidden');
         target.classList.add('page-active');
     }
 
-    if (base === "projects") 
+    if (base === "projects")  // SE tiver ID, vai pro project/model-view.
     {
         if (id)
             Load_Details_Project(id);
@@ -355,7 +420,7 @@ function Load_Models() // Pega os grids do HTML; cria uma função molde pra evi
     const models = //Array
     {
         HoloParty: document.querySelector('#models-holoparty .models-grid'),
-        Miscellaneous: document.querySelector("#models-misc .misc-models-grid")
+        Miscellaneous: document.querySelector("#models-misc .models-grid")
     }
 
     
@@ -367,10 +432,16 @@ function Load_Models() // Pega os grids do HTML; cria uma função molde pra evi
 
     function createModelCard(model) { 
         return ` 
-            <a href="models/${model.id}" class="card-model" data-route> 
-                <img src="${model.images.posed}" alt="${model.name} Preview">
-                <h3>${model.name}</h3>
-            </a>
+            <li class="card-model" data-route>
+                <a href="models/${model.id}"> 
+                    <div class="img-box">
+                        <figure>
+                            <img src="${model.images.posed}" alt="${model.name} Preview">
+                        </figure>
+                    </div>
+                    <div class="model-name">${model.name}</div>
+                </a>
+            </li>
         `;
     }
 
@@ -397,22 +468,24 @@ function Load_Details_Project(id)
     }
 
     const project_view = `
-        <div id="project-panel">
-            <section id="project-info">
-                <div class="desc">About: ${project.desc} </div>
-                <div>Techs: ${project.techs} </div>
-                <a href="${project.link}" class="contacts">Github</a>
-            </section>
-            <section id="right-project-info">
-                <div class="project-title"> ${project.title} </div>
-                <div class="image-display"></div>
-                <section id="project-images">
-                    <img src="${project.images.img1}" alt="${project.title} Preview">
-                    <img src="${project.images.img2}" alt="${project.title} Preview">
-                    <img src="${project.images.img3}" alt="${project.title} Preview">
-                    <img src="${project.images.img4}" alt="${project.title} Preview">
+        <div id="project-view-container" class="background-bar">
+            <div id="project-panel">
+                <section id="project-info">
+                    <div class="desc">About: ${project.desc} </div>
+                    <div>Techs: ${project.techs} </div>
+                    <a href="${project.link}" class="contacts">Github</a>
                 </section>
-            </section>
+                <section id="right-project-info">
+                    <div class="project-title"> ${project.title} </div>
+                    <div class="image-display"></div>
+                    <section id="project-images">
+                        <img src="${project.images.img1}" alt="${project.title} Preview">
+                        <img src="${project.images.img2}" alt="${project.title} Preview">
+                        <img src="${project.images.img3}" alt="${project.title} Preview">
+                        <img src="${project.images.img4}" alt="${project.title} Preview">
+                    </section>
+                </section>
+            </div>
         </div>
     ` ;
 
@@ -437,16 +510,43 @@ function Load_Details_Models(id)
                 <img src="${model.images.img3}" alt="${model.name} Preview">
                 <img src="${model.images.img4}" alt="${model.name} Preview">
             </section>
-            <div class="twod-model"> <img src=${model.images.posed} alt=${model.name}> </div>
+            <div class="twod-model">
+                <img src=${model.images.posed} alt=${model.name}>
+                <button class= "view-3d-model" onclick="window.open('')">3D</button>  
+            </div>
             <section id="model-info">
                 <div class="model-info-name">${model.name}</div>
-                <div class="model-info-desc">About: ${model.desc}</div>
-                <a href="${model.sketchfab}" class="sketchfab">SketchFab</a>
+                <div class="model-info-desc">${model.desc}</div>
+                <div class="model-info-about">${model.about}</div>
+                <a href="${model.sketchfab}" class="sketchfab"> SketchFab </a>
             </section>
         </div>
     `;
 
     modelInfo.innerHTML = model_view;
+}
+
+let currentLanguage = "en";
+
+function changeURLLanguage(targetLanguage) // ?????????? 
+{
+    currentLanguage = targetLanguage;
+
+    Navigate();
+}
+
+function changeSiteLanguage()
+{
+    const words = document.querySelectorAll("[data-i18n]");
+
+    words.forEach(word =>
+    {
+        const key = word.getAttribute("data-i18n");
+        if (translations[currentLanguage] && translations[currentLanguage][key])
+        {
+            word.textContent = translations[currentLanguage][key];
+        }
+    });
 }
 
 // Aparentemente só funciona localmente
