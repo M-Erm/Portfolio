@@ -584,7 +584,7 @@ function ChangeProjectImage(newImage)
 function Load_Details_Models(id)
 {
     const modelInfo = document.getElementById("model-view");
-
+    
     const model = modelsData.find((model) => model.id === id)
 
     if (!model)
