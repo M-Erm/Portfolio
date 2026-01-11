@@ -483,8 +483,8 @@ function Load_Models() // Filtra: Valor de Model.category comparado com nome da 
 
     function createModelCard(model) { 
         return ` 
-            <li class="card-model" data-route>
-                <a href="models/${model.id}"> 
+            <li class="card-model" >
+                <a href="models/${model.id}" data-route> 
                     <div class="img-box">
                         <figure>
                             <img src="${model.images.posed}" alt="${model.name} Preview">
