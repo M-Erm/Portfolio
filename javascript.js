@@ -371,7 +371,10 @@ function Navigate(path)
         path = parts.join("/");
     }
 
-    const pathWithLang = currentLanguage + "/" + path  || "";
+    const pathWithLang = path
+        ? `${currentLanguage}/${path}`
+        : `${currentLanguage}`;
+
     const fullUrl = `${BASE_PATH}/${pathWithLang}`;
     
     if (window.location.pathname !== fullUrl) // <-- Só muda URL real se for diferente da URL do código
