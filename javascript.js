@@ -353,6 +353,11 @@ document.addEventListener("click", (click) =>
 
     click.preventDefault();
 
+    if (path.startsWith(BASE_PATH)) 
+    {
+        path = path.substring(BASE_PATH.length);
+    }
+
     const path = link.getAttribute("href");
     Navigate(path);
 })
@@ -371,10 +376,7 @@ function Navigate(path)
         path = parts.join("/");
     }
 
-    const pathWithLang = path
-        ? `${currentLanguage}/${path}`
-        : `${currentLanguage}`;
-
+    const pathWithLang = currentLanguage + "/" + path  || "";
     const fullUrl = `${BASE_PATH}/${pathWithLang}`;
     
     if (window.location.pathname !== fullUrl) // <-- Só muda URL real se for diferente da URL do código
@@ -382,9 +384,11 @@ function Navigate(path)
         history.pushState({},"", fullUrl);
     }
     
-    const pathparts = path.split("/"); // Divide o pageId em base e id
+    const pathparts = path.split("/"); // Divide o path em base e id
     const base = pathparts[0] || "";
     const id = pathparts[1] || null;
+
+    let pageId;
 
     if (base ==="")  // Dá valor ao pageId de acordo com o valor recebido. Útil para ativar página
         pageId = "homepage";
@@ -396,6 +400,11 @@ function Navigate(path)
         pageId = "contact";
     else if (base ==="animations")
         pageId = "animations";
+    else 
+    {
+        console.warn("Página não reconhecida", base)
+        pageId = "homepage";
+    }
 
     pages.forEach(page => // Esconde todas as páginas 
     {
@@ -554,10 +563,13 @@ function Load_Details_Models(id)
 {
     const modelInfo = document.getElementById("model-view");
     
-    const model = modelsData.find(model => model.id === id)
+    const model = modelsData.find((model) => model.id === id)
 
     if (!model)
+    {
+        console.log("Modelo Não encontrado");
         return;
+    }
 
     const model_view = `
         <div id="model-view-container">
@@ -658,5 +670,6 @@ function ChangeLanguageHTML()
 // Aparentemente só funciona localmente
 window.addEventListener("DOMContentLoaded", () => {
     const currentPath = window.location.pathname.replace(BASE_PATH, "");
+    console.log("navegando para:", currentPath);
     Navigate(currentPath);
 });
