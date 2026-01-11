@@ -24,9 +24,11 @@ const translations = {
         games: "Games",
         gamemodding: "Game Modding",
         college: "College",
+        video_animations: "VIDEO ANIMATIONS",
         holoparty_animations: "HOLOPARTY ANIMATIONS",
+        model_animations: "MODEL ANIMATIONS",
         about: "ABOUT",
-        about_me: "I am a Software Engineering Student who likes Game Development, 3D Modeling and Animation. In 2025 I decided I wanted to develop projects. Be part of something and understand how it was made.",
+        about_me: "I am a Software Engineering Student who likes Game Development, 3D Modeling and Animation.\n In 2025 I decided I wanted to develop projects. Be part of something and understand how it was made.",
         q:"Q: Do you Have A Job Preference?",
         Q2:"Q: Since When do you program?",
         Q3:"Q: What Languages do you speak?",
@@ -50,9 +52,11 @@ const translations = {
         games: "Jogos",
         gamemodding: "Modificação de Jogos",
         college: "Faculdade",
+        video_animations: "VIDEOS DE ANIMAÇÕES",
         holoparty_animations: "ANIMAÇÕES HOLOPARTY",
+        model_animations: "ANIMAÇÕES DESTE MODELO",
         about: "SOBRE MIM",
-        about_me: "Eu sou um estudante de Engenharia de Software que gosta de Desenvolvimento de Jogos, Modelagem 3D e Animação. Em 2025 eu decidi que queria desenvolver projetos, pela ideia de ser parte de algo e entender como as coisas funcionam.",
+        about_me: "Eu sou um estudante de Engenharia de Software que gosta de Desenvolvimento de Jogos, Modelagem 3D e Animação.\n Em 2025 decidi que queria desenvolver projetos, ser parte de algo e entender como as coisas são feitas.",
         q:"Q: Você tem uma preferência de trabalho?",
         Q2:"Q: Desde quando você programa?",
         Q3:"Q: Quais linguages você fala?",
@@ -89,11 +93,11 @@ const projectsData =
         techs: ["Unity, Blender, C#"],
         images: 
         {
-            card: "img/evilgame/evil-card.png",
-            img1: "img/evilgame/evil-1.png",
-            img2: "img/evilgame/evil-2.png",
-            img3: "img/evilgame/evil-3.png",
-            img4: "img/evilgame/evil-4.png"
+            card: "img/evilgame/evilgame-card.png",
+            img1: "img/evilgame/evilgame-1.png",
+            img2: "img/evilgame/evilgame-2.png",
+            img3: "img/evilgame/evilgame-3.png",
+            img4: "img/evilgame/evilgame-4.png"
         },
         desc: "Evil: Neuro's Betrayal is an Unofficial Evil-Neuro's game.",
         link: "Not Open Source"
@@ -123,7 +127,7 @@ const projectsData =
         techs: ["Java, Fabric API"],
         images: 
         {
-            card: "img/fabricmod/fabric-mod-card.png",
+            card: "Portfolio/img/fabricmod/fabric-mod-card.png",
             img1: "img/fabricmod/fabric-1.png",
             img2: "img/fabricmod/fabric-2.png",
             img3: "img/fabricmod/fabric-3.png",
@@ -140,7 +144,7 @@ const projectsData =
         techs: ["Java, Forge API"],
         images: 
         {
-            card: "img/forgemod/forge-mod-card.png",
+            card: "/Portfolio/img/forgemod/forge-mod-card.png", //Teste por que sou acéfalo
             img1: "img/forgemod/forge-1.png",
             img2: "img/forgemod/forge-2.png",
             img3: "img/forgemod/forge-3.png",
@@ -157,7 +161,7 @@ const projectsData =
         techs: ["Unity, C#"],
         images:
         {
-            card: "img/ror2/ror2-mod-card.png",
+            card: "/img/ror2/ror2-card.png",
             img1: "img/ror2/ror2-1.png",
             img2: "img/ror2/ror2-2.png",
             img3: "img/ror2/ror2-3.png",
@@ -227,6 +231,7 @@ const modelsData =
         category: "HoloParty",
         desc: "Unofficial Fuwawa Abyssgard - from Hololive.",
         about: "This model was created as a Holoparty 3D asset.",
+        model3d: "",
         sketchfab: "https://sketchfab.com/M-erm",
         images: 
         {
@@ -243,6 +248,7 @@ const modelsData =
         category: "HoloParty",
         desc: "Unofficial Mococo Abyssgard - from Hololive. HoloParty 3D Model.",
         about: "This model was created as a Holoparty 3D asset.",
+        model3d: "/models/mococo_abyssgard.glb",
         sketchfab: "https://sketchfab.com/M-erm",
         images: 
         {
@@ -259,6 +265,7 @@ const modelsData =
         category: "HoloParty",
         desc: "Unofficial Shiori Novella - from Hololive. HoloParty 3D Model.",
         about: "This model was created as a Holoparty 3D asset.",
+        model3d: "",
         sketchfab: "https://sketchfab.com/M-erm",
         images: 
         {
@@ -275,6 +282,7 @@ const modelsData =
         category: "HoloParty",
         desc: "Unofficial Koseki Bijou - from Hololive. HoloParty 3D Model.",
         about: "This model was created as a Holoparty 3D asset.",
+        model3d: "",
         sketchfab: "https://sketchfab.com/M-erm",
         images: 
         {
@@ -291,6 +299,7 @@ const modelsData =
         category: "HoloParty",
         desc: "Unofficial PlaceHolder - from Hololive. HoloParty 3D Model.",
         about: "This model was created as a Holoparty 3D asset.",
+        model3d: "",
         sketchfab: "https://sketchfab.com/M-erm",
         images: 
         {
@@ -307,6 +316,7 @@ const modelsData =
         category: "HoloParty",
         desc: "Unofficial PlaceHolder - from Hololive. HoloParty 3D Model.",
         about: "This model was created as a Holoparty 3D asset.",
+        model3d: "",
         sketchfab: "https://sketchfab.com/M-erm",
         images: 
         {
@@ -323,6 +333,7 @@ const modelsData =
         category: "Miscellaneous",
         desc: "Unofficial Evil Neuro. Evil: Neuro's Betrayal 3D Model.",
         about: "This model was created as a Evil: blablabla 3D asset.",
+        model3d: "",
         sketchfab: "https://sketchfab.com/M-erm",
         images: 
         {
@@ -334,6 +345,29 @@ const modelsData =
         }
     }
 ]
+
+const animationsData =
+[
+    {
+        id: "animation-01",
+        name: "",
+        category: "video",
+        link: ""
+    },
+    {
+        id: "animation-02",
+        name: "Mococo Walk",
+        category: "ingame",
+        link: ""
+    },
+    {
+        id: "animation-03",
+        name: "Fuwawa Walk",
+        category: "ingame",
+        link: ""
+    },
+]
+
 
 const BASE_PATH ="/Portfolio";
 
@@ -525,12 +559,12 @@ function Load_Details_Project(id)
                 </section>
                 <section id="right-project-info">
                     <div class="project-title"> ${project.title} </div>
-                    <div class="image-display"></div>
+                    <div id="project-image-display"> <img id="image-display" src="${project.images.img1}" alt="${project.title} Preview"> </div>
                     <section id="project-images">
-                        <img src="${project.images.img1}" alt="${project.title} Preview">
-                        <img src="${project.images.img2}" alt="${project.title} Preview">
-                        <img src="${project.images.img3}" alt="${project.title} Preview">
-                        <img src="${project.images.img4}" alt="${project.title} Preview">
+                        <img src="${project.images.img1}" onclick="ChangeProjectImage('${project.images.img1}')" alt="${project.title} Preview">
+                        <img src="${project.images.img2}" onclick="ChangeProjectImage('${project.images.img2}')" alt="${project.title} Preview">
+                        <img src="${project.images.img3}" onclick="ChangeProjectImage('${project.images.img3}')" alt="${project.title} Preview">
+                        <img src="${project.images.img4}" onclick="ChangeProjectImage('${project.images.img4}')" alt="${project.title} Preview">
                     </section>
                 </section>
             </div>
@@ -539,6 +573,13 @@ function Load_Details_Project(id)
 
     projectInfo.innerHTML = project_view;
 }
+
+function ChangeProjectImage(newImage)
+{
+    const displayImage = document.getElementById("image-display");
+    displayImage.src = newImage;
+}
+
 
 function Load_Details_Models(id)
 {
@@ -550,17 +591,33 @@ function Load_Details_Models(id)
         return;
 
     const model_view = `
-        <div id="model-view-container" class="background-bar">
-            <section id="model-images">
-                <img src="${model.images.img1}" alt="${model.name} Preview">
-                <img src="${model.images.img2}" alt="${model.name} Preview">
-                <img src="${model.images.img3}" alt="${model.name} Preview">
-                <img src="${model.images.img4}" alt="${model.name} Preview">
-            </section>
-            <div class="twod-model">
-                <img src=${model.images.posed} alt=${model.name}>
-                <button class= "view-3d-model">3D</button>
+        <div id="model-view-container">
+            <div id="twod-view">
+                <section id="model-images">
+                    <img src="${model.images.posed}" onclick="ChangeDisplayImage('${model.images.posed}')" alt="${model.name} Preview">
+                    <img src="${model.images.img1}" onclick="ChangeDisplayImage('${model.images.img1}')" alt="${model.name} Preview">
+                    <img src="${model.images.img2}" onclick="ChangeDisplayImage('${model.images.img2}')" alt="${model.name} Preview">
+                    <img src="${model.images.img3}" onclick="ChangeDisplayImage('${model.images.img3}')" alt="${model.name} Preview">
+                    <img src="${model.images.img4}" onclick="ChangeDisplayImage('${model.images.img4}')" alt="${model.name} Preview">
+                </section>
+                <div id="twod-model">
+                    <img id="display-image" src="${model.images.posed}" alt="${model.name} Preview">
+                    <button class="view-3d-model" onclick="Toggle3D()">3D</button>
+                </div>
             </div>
+
+            <div id="threed-view" style="display: none;">
+            <button class="view-3d-model" onclick="Toggle2D()">2D</button>
+                <model-viewer
+                    src="${model.model3d}"
+                    alt="${model.name} 3D Model"
+                    auto-rotate
+                    camera-controls
+                    shadow-intensity="1"
+                    style="width: 100%; height: 600px;">
+                </model-viewer>
+            </div>
+
             <section id="model-info">
                 <div class="model-info-name">${model.name}</div>
                 <div class="model-info-desc">${model.desc}</div>
@@ -568,9 +625,34 @@ function Load_Details_Models(id)
                 <a href="${model.sketchfab}" class="sketchfab"> SketchFab </a>
             </section>
         </div>
+
+        <div class="contrast-text" data-i18n="model_animations"> ${model.name} In-Game Animations </div>
+        <div style="width: 100vw; min-height: 40vh; background-color: gray;">
+            <div class="display-animation"></div>
+            <div class="display-animation"></div>
+            <div class="display-animation"></div>
+        </div>
     `;
 
     modelInfo.innerHTML = model_view;
+}
+
+function ChangeDisplayImage(newimage)
+{
+    const displayImage = document.getElementById("display-image");
+    displayImage.src = newimage;
+}
+
+function Toggle3D()
+{
+    document.getElementById("twod-view").style.display = "none";
+    document.getElementById("threed-view").style.display = "block";
+}
+
+function Toggle2D()
+{
+    document.getElementById("twod-view").style.display = "flex";
+    document.getElementById("threed-view").style.display = "none";
 }
 
 function ChangeLanguage(targetLanguage)

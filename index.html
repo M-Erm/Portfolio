@@ -7,6 +7,7 @@
   <link rel="icon" href="img/favicon.ico">
   <link rel="stylesheet" href="style.css">
   <script src="javascript.js" defer></script>
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
 </head>
 
 <body>
@@ -32,28 +33,29 @@
     <section id="homepage" class="page-active">
   
       <section class="top">
-        <div class="top-display">
-          <video autoplay=""
+        <div class="top-display"> 
+          <img src="img/image.png"> <!-- bro this site is turning into a giant shitpost!-->
+          <video autoplay="" 
             muted="" 
             loop="" 
             playsinline="" 
             id="bgvid">
-            <source src="" 
+            <source src="image.png"
             type="video/webm">
           </video>
         </div>
       </section>
 
-      <div style="width: 80vw; height: 1px; background-color: grey; margin: 3%"></div>
+      <div class="section-divider"></div>
 
       <div class="contrast-text" data-i18n="featured_projects"> FEATURED PROJECTS </div>
 
         <div class="elements-grid">
-          <div class="featured-projects"></div>
-          <div class="featured-projects"></div>
+          <a href="projects/HoloParty" class="featured-projects"> <img src="img/holoparty/holoparty-card.jpg" alt="HoloParty Preview"></a>
+          <a href="projects/Evil_Neuros_Betrayal" class="featured-projects"><img src="img/evilgame/evilgame-card.png" alt="Evil: Neuro's Betrayal Preview"></a>
         </div>
 
-      <div style="width: 80vw; height: 1px; background-color: grey; margin: 3%;"></div>
+      <div class="section-divider"></div>
 
       <div class="contrast-text" data-i18n="featured_animations"> FEATURED ANIMATIONS </div>
 
@@ -63,9 +65,15 @@
         <div class="animation"></div>
       </div>
 
-      <div style="width: 80vw; height: 1px; background-color: grey; margin: 3%;"></div>
+      <div class="section-divider"></div>
 
       <div class="contrast-text" data-i18n="newest_animation"> NEWEST ANIMATION </div>
+
+      <div id="video-displayer-container">
+        <div id="video-displayer"></div>
+      </div>
+      <div style="margin-left: 25%; font-size: 20px; font-weight: bold; color: #6F6F6F;">Gigi x Cici Animation</div>
+      <div style="margin-left: 25%; font-size: 20px; font-weight: bold; color: #6F6F6F; margin-bottom: 5rem">See on youtube</div>
 
 
     </section>
@@ -145,7 +153,7 @@
         </div>
       </section>
 
-      <div class="contrast-text" style="color: white;" data-i18n="featured_animations"> FEATURED ANIMATIONS </div>
+      <div class="contrast-text" style="color: white;" data-i18n="video_animations"> VIDEO ANIMATIONS </div>
 
         <div class="elements-grid">
           <div class="animation"></div>
@@ -153,9 +161,9 @@
           <div class="animation"></div>
         </div>
 
-        <div style="width: 80vw; height: 1px; background-color: grey; margin-bottom: 3%;"></div>
+        <div class="section-divider"></div>
 
-        <div class="contrast-text" style="color: white;" data-i18n="holoparty_animations"> HoloParty ANIMATIONS</div>
+        <div class="contrast-text" style="color: white;" data-i18n="holoparty_animations"> HOLOPARTY ANIMATIONS</div>
 
           <div class="elements-grid">
             <div class="animation"></div>
