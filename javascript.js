@@ -76,11 +76,11 @@ const projectsData =
         techs: ["Unity, Blender, C#"],
         images:
         {
-            card: "img/holoparty/holoparty-card.jpg",
-            img1: "img/holoparty/holoparty-1.jpg",
-            img2: "img/holoparty/holoparty-2.jpg",
-            img3: "img/holoparty/holoparty-3.jpg",
-            img4: "img/holoparty/holoparty-4.jpg"
+            card: "/Portfolio/img/holoparty/holoparty-card.jpg",
+            img1: "/Portfolio/img/holoparty/holoparty-1.jpg",
+            img2: "/Portfolio/img/holoparty/holoparty-2.jpg",
+            img3: "/Portfolio/img/holoparty/holoparty-3.jpg",
+            img4: "/Portfolio/img/holoparty/holoparty-4.jpg"
         },
         desc: "HoloParty is A Co-op Multiplayer Unofficial Hololive game with fun minigames!",
         link: "Not Open Source"
@@ -93,11 +93,11 @@ const projectsData =
         techs: ["Unity, Blender, C#"],
         images: 
         {
-            card: "img/evilgame/evilgame-card.png",
-            img1: "img/evilgame/evilgame-1.png",
-            img2: "img/evilgame/evilgame-2.png",
-            img3: "img/evilgame/evilgame-3.png",
-            img4: "img/evilgame/evilgame-4.png"
+            card: "/Portfolio/img/evilgame/evilgame-card.png",
+            img1: "/Portfolio/img/evilgame/evilgame-1.png",
+            img2: "/Portfolio/img/evilgame/evilgame-2.png",
+            img3: "/Portfolio/img/evilgame/evilgame-3.png",
+            img4: "/Portfolio/img/evilgame/evilgame-4.png"
         },
         desc: "Evil: Neuro's Betrayal is an Unofficial Evil-Neuro's game.",
         link: "Not Open Source"
@@ -110,11 +110,11 @@ const projectsData =
         techs: ["Electron, SQLite, Html, CSS, JavaScript"],
         images: 
         {
-            card: "img/projectmanager/project-manager-card.png",
-            img1: "img/projectmanager/project-manager-1.png",
-            img2: "img/projectmanager/project-manager-2.png",
-            img3: "img/projectmanager/project-manager-3.png",
-            img4: "img/projectmanager/project-manager-4.png"
+            card: "/Portfolio/img/projectmanager/project-manager-card.png",
+            img1: "/Portfolio/img/projectmanager/project-manager-1.png",
+            img2: "/Portfolio/img/projectmanager/project-manager-2.png",
+            img3: "/Portfolio/img/projectmanager/project-manager-3.png",
+            img4: "/Portfolio/img/projectmanager/project-manager-4.png"
         },
         desc: "A Project Manager.",
         link: "https://github.com/M-Erm/Project-Manager"
@@ -127,11 +127,11 @@ const projectsData =
         techs: ["Java, Fabric API"],
         images: 
         {
-            card: "Portfolio/img/fabricmod/fabric-mod-card.png",
-            img1: "img/fabricmod/fabric-1.png",
-            img2: "img/fabricmod/fabric-2.png",
-            img3: "img/fabricmod/fabric-3.png",
-            img4: "img/fabricmod/fabric-4.png"
+            card: "/Portfolio/img/fabricmod/fabric-mod-card.png",
+            img1: "/Portfolio/img/fabricmod/fabric-1.png",
+            img2: "/Portfolio/img/fabricmod/fabric-2.png",
+            img3: "/Portfolio/img/fabricmod/fabric-3.png",
+            img4: "/Portfolio/img/fabricmod/fabric-4.png"
         },
         desc: "A Minecraft 1.21.1 Fabric Mod.",
         link: "https://github.com/M-Erm/Fabric-Minecraft-Mod"
@@ -145,10 +145,10 @@ const projectsData =
         images: 
         {
             card: "/Portfolio/img/forgemod/forge-mod-card.png", //Teste por que sou acéfalo
-            img1: "img/forgemod/forge-1.png",
-            img2: "img/forgemod/forge-2.png",
-            img3: "img/forgemod/forge-3.png",
-            img4: "img/forgemod/forge-4.png"
+            img1: "/Portfolio/img/forgemod/forge-1.png",
+            img2: "/Portfolio/img/forgemod/forge-2.png",
+            img3: "/Portfolio/img/forgemod/forge-3.png",
+            img4: "/Portfolio/img/forgemod/forge-4.png"
         },
         desc: "A Minecraft 1.21.1 Forge Mod.",
         link: "https://github.com/M-Erm/Forge-MDK-Mod"
@@ -161,11 +161,11 @@ const projectsData =
         techs: ["Unity, C#"],
         images:
         {
-            card: "/img/ror2/ror2-card.png",
-            img1: "img/ror2/ror2-1.png",
-            img2: "img/ror2/ror2-2.png",
-            img3: "img/ror2/ror2-3.png",
-            img4: "img/ror2/ror2-4.png"
+            card: "/Portfolio/img/ror2/ror2-card.png",
+            img1: "/Portfolio/img/ror2/ror2-1.png",
+            img2: "/Portfolio/img/ror2/ror2-2.png",
+            img3: "/Portfolio/img/ror2/ror2-3.png",
+            img4: "/Portfolio/img/ror2/ror2-4.png"
         },
         desc: "A Risk of Rain 2 Mod.",
         link: "https://github.com/M-Erm/"
@@ -178,11 +178,11 @@ const projectsData =
         techs: ["Unity, C#"],
         images:
         {
-            card: "img/terraria/terraria-card.png",
-            img1: "img/terraria/terraria-1.png",
-            img2: "img/terraria/terraria-2.png",
-            img3: "img/terraria/terraria-3.png",
-            img4: "img/terraria/terraria-4.png"
+            card: "/Portfolio/img/terraria/terraria-card.png",
+            img1: "/Portfolio/img/terraria/terraria-1.png",
+            img2: "/Portfolio/img/terraria/terraria-2.png",
+            img3: "/Portfolio/img/terraria/terraria-3.png",
+            img4: "/Portfolio/img/terraria/terraria-4.png"
         },
         desc: "A Terraria Mod.",
         link: "https://github.com/M-Erm/"
@@ -195,11 +195,11 @@ const projectsData =
         techs: ["C"],
         images:
         {
-            card: "img/CC-card.png",
-            img1: "img/CC-1.png",
-            img2: "img/CC-2.png",
-            img3: "img/CC-3.png",
-            img4: "img/CC-4.png"
+            card: "/Portfolio/img/cc/cc-card.png",
+            img1: "/Portfolio/img/cc/cc-1.png",
+            img2: "/Portfolio/img/cc/cc-2.png",
+            img3: "/Portfolio/img/cc/c-3.png",
+            img4: "/Portfolio/img/cc/cc-4.png"
         },
         desc: "A C Calculator.",
         link: "https://github.com/M-Erm/Calculadora-C"
@@ -212,11 +212,11 @@ const projectsData =
         techs: ["Python, pandas, matplotlb"],
         images:
         {
-            card: "img/statistics/statistics-card.png",
-            img1: "img/statistics/statistics-1.png",
-            img2: "img/statistics/statistics-2.png",
-            img3: "img/statistics/statistics-3.png",
-            img4: "img/statistics/statistics-4.png"
+            card: "/Portfolio/img/statistics/statistics-card.png",
+            img1: "/Portfolio/img/statistics/statistics-1.png",
+            img2: "/Portfolio/img/statistics/statistics-2.png",
+            img3: "/Portfolio/img/statistics/statistics-3.png",
+            img4: "/Portfolio/img/statistics/statistics-4.png"
         },
         desc: "College Statistics Project developed in Python (silly one)",
         link: "https://github.com/M-Erm/1P-Estatistica"
@@ -235,11 +235,11 @@ const modelsData =
         sketchfab: "https://sketchfab.com/M-erm",
         images: 
         {
-            posed: "img/fuwawa/fuwawa-posed.png",
-            img1: "img/fuwawa/fuwawa-1.png",
-            img2: "img/fuwawa/fuwawa-2.png",
-            img3: "img/fuwawa/fuwawa-3.png",
-            img4: "img/fuwawa/fuwawa-4.png",
+            posed: "/Portfolio/img/fuwawa/fuwawa-posed.png",
+            img1: "/Portfolio/img/fuwawa/fuwawa-1.png",
+            img2: "/Portfolio/img/fuwawa/fuwawa-2.png",
+            img3: "/Portfolio/img/fuwawa/fuwawa-3.png",
+            img4: "/Portfolio/img/fuwawa/fuwawa-4.png",
         }
     },
     {
@@ -252,11 +252,11 @@ const modelsData =
         sketchfab: "https://sketchfab.com/M-erm",
         images: 
         {
-            posed: "img/mococo/mococo-posed.png",
-            img1: "img/mococo/mococo-1.png",
-            img2: "img/mococo/mococo-2.png",
-            img3: "img/mococo/mococo-3.png",
-            img4: "img/mococo/mococo-4.png",
+            posed: "/Portfolio/img/mococo/mococo-posed.png",
+            img1: "/Portfolio/img/mococo/mococo-1.png",
+            img2: "/Portfolio/img/mococo/mococo-2.png",
+            img3: "/Portfolio/img/mococo/mococo-3.png",
+            img4: "/Portfolio/img/mococo/mococo-4.png",
         }
     },
     {
@@ -269,11 +269,11 @@ const modelsData =
         sketchfab: "https://sketchfab.com/M-erm",
         images: 
         {
-            posed: "img/shiori/shiori-posed.png",
-            img1: "img/shiori/shiori-1.png",
-            img2: "img/shiori/shiori-2.png",
-            img3: "img/shiori/shiori-3.png",
-            img4: "img/shiori/shiori-4.png",
+            posed: "/Portfolio/img/shiori/shiori-posed.png",
+            img1: "/Portfolio/img/shiori/shiori-1.png",
+            img2: "/Portfolio/img/shiori/shiori-2.png",
+            img3: "/Portfolio/img/shiori/shiori-3.png",
+            img4: "/Portfolio/img/shiori/shiori-4.png",
         }
     },
     {
@@ -286,11 +286,11 @@ const modelsData =
         sketchfab: "https://sketchfab.com/M-erm",
         images: 
         {
-            posed: "img/biboo/biboo-posed.png",
-            img1: "img/biboo/biboo-1.png",
-            img2: "img/biboo/biboo-2.png",
-            img3: "img/biboo/biboo-3.png",
-            img4: "img/biboo/biboo-4.png",
+            posed: "/Portfolio/img/biboo/biboo-posed.png",
+            img1: "/Portfolio/img/biboo/biboo-1.png",
+            img2: "/Portfolio/img/biboo/biboo-2.png",
+            img3: "/Portfolio/img/biboo/biboo-3.png",
+            img4: "/Portfolio/img/biboo/biboo-4.png",
         }
     },
     {
@@ -303,11 +303,11 @@ const modelsData =
         sketchfab: "https://sketchfab.com/M-erm",
         images: 
         {
-            posed: "img/placeholder/placeholder-posed.png",
-            img1: "img/placeholder/placeholder-1.png",
-            img2: "img/placeholder/placeholder-2.png",
-            img3: "img/placeholder/placeholder-3.png",
-            img4: "img/placeholder/placeholder-4.png",
+            posed: "/Portfolio/img/placeholder/placeholder-posed.png",
+            img1: "/Portfolio/img/placeholder/placeholder-1.png",
+            img2: "/Portfolio/img/placeholder/placeholder-2.png",
+            img3: "/Portfolio/img/placeholder/placeholder-3.png",
+            img4: "/Portfolio/img/placeholder/placeholder-4.png",
         }
     },
     {
@@ -320,11 +320,11 @@ const modelsData =
         sketchfab: "https://sketchfab.com/M-erm",
         images: 
         {
-            posed: "img/placeholder/placeholder-posed.png",
-            img1: "img/placeholder/placeholder-1.png",
-            img2: "img/placeholder/placeholder-2.png",
-            img3: "img/placeholder/placeholder-3.png",
-            img4: "img/placeholder/placeholder-4.png",
+            posed: "/Portfolio/img/placeholder/placeholder-posed.png",
+            img1: "/Portfolio/img/placeholder/placeholder-1.png",
+            img2: "/Portfolio/img/placeholder/placeholder-2.png",
+            img3: "/Portfolio/img/placeholder/placeholder-3.png",
+            img4: "/Portfolio/img/placeholder/placeholder-4.png",
         }
     },
     {
@@ -337,11 +337,11 @@ const modelsData =
         sketchfab: "https://sketchfab.com/M-erm",
         images: 
         {
-            posed: "img/evil/evil-posed.png",
-            img1: "img/evil/evil-1.png",
-            img2: "img/evil/evil-2.png",
-            img3: "img/evil/evil-3.png",
-            img4: "img/evil/evil-4.png",
+            posed: "/Portfolio/img/evil/evil-posed.png",
+            img1: "/Portfolio/img/evil/evil-1.png",
+            img2: "/Portfolio/img/evil/evil-2.png",
+            img3: "/Portfolio/img/evil/evil-3.png",
+            img4: "/Portfolio/img/evil/evil-4.png",
         }
     }
 ]
