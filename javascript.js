@@ -353,13 +353,11 @@ document.addEventListener("click", (click) =>
 
     click.preventDefault();
 
-    if (path.startsWith(BASE_PATH)) 
-    {
-        path = path.substring(BASE_PATH.length);
-    }
-
     const path = link.getAttribute("href");
     Navigate(path);
+
+    console.warn("Href do atributo:", path);
+    console.warn("URL completa seria:", link.href);
 })
 
 function Navigate(path)
@@ -460,7 +458,7 @@ function Load_Projects()
 
     function createProjectCard(project) {
         return `
-            <a href="projects/${project.id}" class="card-project" data-route>
+            <a href="${BASE_PATH}projects/${project.id}" class="card-project" data-route>
                 <img src="${project.images.card}" alt="${project.title} Preview">
                 <h3>${project.title} </h3>
             </a>
@@ -587,17 +585,17 @@ function Load_Details_Models(id)
                 </div>
             </div>
 
-            <div id="threed-view" style="display: none;">
-            <button class="view-3d-model" onclick="Toggle2D()">2D</button>
-                <model-viewer
-                    src="${model.model3d}"
-                    alt="${model.name} 3D Model"
-                    auto-rotate
-                    camera-controls
-                    shadow-intensity="1"
-                    style="width: 100%; height: 600px;">
-                </model-viewer>
-            </div>
+            // <div id="threed-view" style="display: none;">
+            // <button class="view-3d-model" onclick="Toggle2D()">2D</button>
+            //     <model-viewer
+            //         src="${model.model3d}"
+            //         alt="${model.name} 3D Model"
+            //         auto-rotate
+            //         camera-controls
+            //         shadow-intensity="1"
+            //         style="width: 100%; height: 600px;">
+            //     </model-viewer>
+            // </div>
 
             <section id="model-info">
                 <div class="model-info-name">${model.name}</div>
@@ -670,6 +668,5 @@ function ChangeLanguageHTML()
 // Aparentemente só funciona localmente
 window.addEventListener("DOMContentLoaded", () => {
     const currentPath = window.location.pathname.replace(BASE_PATH, "");
-    console.log("navegando para:", currentPath);
     Navigate(currentPath);
 });
