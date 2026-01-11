@@ -226,7 +226,7 @@ const projectsData =
 const modelsData = 
 [
     {
-        id: "Fuwawa_Abyssgard",
+        id: "Fuwawa-Abyssgard",
         name: "Fuwawa Abyssgard",
         category: "HoloParty",
         desc: "Unofficial Fuwawa Abyssgard - from Hololive.",
@@ -243,7 +243,7 @@ const modelsData =
         }
     },
     {
-        id: "Mococo_Abyssgard",
+        id: "Mococo-Abyssgard",
         name: "Mococo Abyssgard",
         category: "HoloParty",
         desc: "Unofficial Mococo Abyssgard - from Hololive. HoloParty 3D Model.",
@@ -260,7 +260,7 @@ const modelsData =
         }
     },
     {
-        id: "model-03",
+        id: "Shiori-Novella",
         name: "Shiori Novella",
         category: "HoloParty",
         desc: "Unofficial Shiori Novella - from Hololive. HoloParty 3D Model.",
@@ -277,7 +277,7 @@ const modelsData =
         }
     },
     {
-        id: "model-04",
+        id: "Koseki-Bijou",
         name: "Koseki Bijou",
         category: "HoloParty",
         desc: "Unofficial Koseki Bijou - from Hololive. HoloParty 3D Model.",
@@ -294,41 +294,7 @@ const modelsData =
         }
     },
     {
-        id: "model-05",
-        name: "PlaceHolder",
-        category: "HoloParty",
-        desc: "Unofficial PlaceHolder - from Hololive. HoloParty 3D Model.",
-        about: "This model was created as a Holoparty 3D asset.",
-        model3d: "",
-        sketchfab: "https://sketchfab.com/M-erm",
-        images: 
-        {
-            posed: "/Portfolio/img/placeholder/placeholder-posed.png",
-            img1: "/Portfolio/img/placeholder/placeholder-1.png",
-            img2: "/Portfolio/img/placeholder/placeholder-2.png",
-            img3: "/Portfolio/img/placeholder/placeholder-3.png",
-            img4: "/Portfolio/img/placeholder/placeholder-4.png",
-        }
-    },
-    {
-        id: "model-06",
-        name: "PlaceHolder",
-        category: "HoloParty",
-        desc: "Unofficial PlaceHolder - from Hololive. HoloParty 3D Model.",
-        about: "This model was created as a Holoparty 3D asset.",
-        model3d: "",
-        sketchfab: "https://sketchfab.com/M-erm",
-        images: 
-        {
-            posed: "/Portfolio/img/placeholder/placeholder-posed.png",
-            img1: "/Portfolio/img/placeholder/placeholder-1.png",
-            img2: "/Portfolio/img/placeholder/placeholder-2.png",
-            img3: "/Portfolio/img/placeholder/placeholder-3.png",
-            img4: "/Portfolio/img/placeholder/placeholder-4.png",
-        }
-    },
-    {
-        id: "model-07",
+        id: "Evil-Neuro",
         name: "Evil Neuro",
         category: "Miscellaneous",
         desc: "Unofficial Evil Neuro. Evil: Neuro's Betrayal 3D Model.",
@@ -514,8 +480,8 @@ function Load_Models() // Filtra: Valor de Model.category comparado com nome da 
 
     function createModelCard(model) { 
         return ` 
-            <li class="card-model" data-route>
-                <a href="models/${model.id}"> 
+            <li class="card-model" >
+                <a href="models/${model.id}" data-route> 
                     <div class="img-box">
                         <figure>
                             <img src="${model.images.posed}" alt="${model.name} Preview">
