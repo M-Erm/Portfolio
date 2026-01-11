@@ -231,7 +231,7 @@ const modelsData =
         category: "HoloParty",
         desc: "Unofficial Fuwawa Abyssgard - from Hololive.",
         about: "This model was created as a Holoparty 3D asset.",
-        model3d: "",
+        model3d: "/Portfolio/models/mococo_abyssgard.glb",
         sketchfab: "https://sketchfab.com/M-erm",
         images: 
         {
@@ -265,7 +265,7 @@ const modelsData =
         category: "HoloParty",
         desc: "Unofficial Shiori Novella - from Hololive. HoloParty 3D Model.",
         about: "This model was created as a Holoparty 3D asset.",
-        model3d: "",
+        model3d: "/Portfolio/models/mococo_abyssgard.glb",
         sketchfab: "https://sketchfab.com/M-erm",
         images: 
         {
@@ -282,7 +282,7 @@ const modelsData =
         category: "HoloParty",
         desc: "Unofficial Koseki Bijou - from Hololive. HoloParty 3D Model.",
         about: "This model was created as a Holoparty 3D asset.",
-        model3d: "",
+        model3d: "/Portfolio/models/mococo_abyssgard.glb",
         sketchfab: "https://sketchfab.com/M-erm",
         images: 
         {
@@ -299,7 +299,7 @@ const modelsData =
         category: "HoloParty",
         desc: "Unofficial PlaceHolder - from Hololive. HoloParty 3D Model.",
         about: "This model was created as a Holoparty 3D asset.",
-        model3d: "",
+        model3d: "/Portfolio/models/mococo_abyssgard.glb",
         sketchfab: "https://sketchfab.com/M-erm",
         images: 
         {
@@ -316,7 +316,7 @@ const modelsData =
         category: "HoloParty",
         desc: "Unofficial PlaceHolder - from Hololive. HoloParty 3D Model.",
         about: "This model was created as a Holoparty 3D asset.",
-        model3d: "",
+        model3d: "/Portfolio/models/mococo_abyssgard.glb",
         sketchfab: "https://sketchfab.com/M-erm",
         images: 
         {
@@ -333,7 +333,7 @@ const modelsData =
         category: "Miscellaneous",
         desc: "Unofficial Evil Neuro. Evil: Neuro's Betrayal 3D Model.",
         about: "This model was created as a Evil: blablabla 3D asset.",
-        model3d: "",
+        model3d: "/Portfolio/models/mococo_abyssgard.glb",
         sketchfab: "https://sketchfab.com/M-erm",
         images: 
         {
