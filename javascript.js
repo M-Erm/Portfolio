@@ -226,7 +226,7 @@ const projectsData =
 const modelsData = 
 [
     {
-        id: "Fuwawa_Abyssgard",
+        id: "model-01",
         name: "Fuwawa Abyssgard",
         category: "HoloParty",
         desc: "Unofficial Fuwawa Abyssgard - from Hololive.",
@@ -243,7 +243,7 @@ const modelsData =
         }
     },
     {
-        id: "Mococo_Abyssgard",
+        id: "model-02",
         name: "Mococo Abyssgard",
         category: "HoloParty",
         desc: "Unofficial Mococo Abyssgard - from Hololive. HoloParty 3D Model.",
@@ -260,7 +260,7 @@ const modelsData =
         }
     },
     {
-        id: "Shiori_Novella",
+        id: "model-03",
         name: "Shiori Novella",
         category: "HoloParty",
         desc: "Unofficial Shiori Novella - from Hololive. HoloParty 3D Model.",
@@ -277,7 +277,7 @@ const modelsData =
         }
     },
     {
-        id: "Koseki_Bijou",
+        id: "model-04",
         name: "Koseki Bijou",
         category: "HoloParty",
         desc: "Unofficial Koseki Bijou - from Hololive. HoloParty 3D Model.",
@@ -294,7 +294,7 @@ const modelsData =
         }
     },
     {
-        id: "Evil_Neuro",
+        id: "model-05",
         name: "Evil Neuro",
         category: "Miscellaneous",
         desc: "Unofficial Evil Neuro. Evil: Neuro's Betrayal 3D Model.",
@@ -552,13 +552,16 @@ function ChangeProjectImage(newImage)
 
 function Load_Details_Models(id)
 {
+    console.log("ID recebido:", id);
+
     const modelInfo = document.getElementById("model-view");
-    
     const model = modelsData.find((model) => model.id === id)
+
+    console.log("Modelo encontrado?", model ? "SIM" : "NÃO");
 
     if (!model)
     {
-        console.log("Modelo Não encontrado");
+        console.error("Modelo Não encontrado");
         return;
     }
 
