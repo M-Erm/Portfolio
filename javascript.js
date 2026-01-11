@@ -1,6 +1,11 @@
 //  ==================================================
-// Contém dados, carrega os cards de projetos e modelos no HTML e atualiza os links localmente.
+// Contém referências para todos os projetos, modelos, traduções;
+// Carrega os cards de projetos e modelos no HTML automaticamente;
+// Atualiza o URL localmente;
+// Atualiza linguagem;
 // ==================================================
+
+let currentLanguage = "en";
 
 const translations = {
 
@@ -9,6 +14,8 @@ const translations = {
         projects: "PROJECTS",
         animations: "ANIMATIONS",
         contact: "CONTACT",
+        featured_projects: "FEATURED PROJECTS",
+        featured_animations: "FEATURED ANIMATIOONS",
         whoami: "Who Am I",
         officialsns: "Official SNS",
         disclaimer: "HoloParty Models Disclaimer All rights to the original characters and intellectual property belong to COVER Corp. These models are not officially affiliated with  Hololive Production or COVER Corp. The models are created for use in HoloParty, an independent fan-made game project. This projects are not an official Hololive product.",
@@ -21,10 +28,13 @@ const translations = {
     "pt-br": {
         models: "MODELOS",
         projects: "PROJETOS",
+        animations: "ANIMAÇÕES",
         contact: "CONTATO",
+        featured_projects: "PROJETOS EM DESTAQUE",
+        featured_animations: "ANIMAÇÕES EM DESTAQUE",
         whoami: "Quem sou eu?",
         officialsns: "Redes Oficiais",
-        disclaimer: "Aviso Legal",
+        disclaimer: "Aviso Legal sobre modelos Holoparty",
         miscellaneous: "Variados",
         games: "Jogos",
         gamemodding: "Modificação de Jogos",
@@ -35,7 +45,7 @@ const translations = {
 const projectsData = 
 [
     {
-        id: "project-01",
+        id: "HoloParty",
         title: "HoloParty",
         category: "game",
         stats: ["In Development"],
@@ -48,11 +58,11 @@ const projectsData =
             img3: "img/holoparty/holoparty-3.jpg",
             img4: "img/holoparty/holoparty-4.jpg"
         },
-        desc: "HoloParty is A Co-op Multiplayer Unofficial Hololive game.",
+        desc: "HoloParty is A Co-op Multiplayer Unofficial Hololive game with fun minigames!",
         link: "Not Open Source"
     },
     {
-        id: "project-02",
+        id: "Evil_Neuros_Betrayal",
         title: "Evil: Neuro’s Betrayal",
         category: "game",
         stats: ["In Development"],
@@ -69,7 +79,7 @@ const projectsData =
         link: "Not Open Source"
     },
     {
-        id: "project-03",
+        id: "Project_Manager",
         title: "Project Manager",
         category: "miscellaneous",
         stats: ["In Development"],
@@ -86,8 +96,8 @@ const projectsData =
         link: "https://github.com/M-Erm/Project-Manager"
     },
     {
-        id: "project-04",
-        title: "Minecraft Fabric Mod",
+        id: "Vtuber_Ultimate_Weapon_Pack",
+        title: "Vtuber Ultimate Weapon Pack",
         category: "modding",
         stats: ["Archived"],
         techs: ["Java, Fabric API"],
@@ -154,7 +164,7 @@ const projectsData =
         link: "https://github.com/M-Erm/"
     },
     {
-        id: "project-08",
+        id: "C_Calculator",
         title: "C Calculator",
         category: "college",
         stats: ["Finished"],
@@ -171,7 +181,7 @@ const projectsData =
         link: "https://github.com/M-Erm/Calculadora-C"
     },
     {
-        id: "project-09",
+        id: "Python_Statistics",
         title: "Python Statistics",
         category: "college",
         stats: ["Finished"],
@@ -192,7 +202,7 @@ const projectsData =
 const modelsData = 
 [
     {
-        id: "model-01",
+        id: "Fuwawa_Abyssgard",
         name: "Fuwawa Abyssgard",
         category: "HoloParty",
         desc: "Unofficial Fuwawa Abyssgard - from Hololive.",
@@ -208,10 +218,11 @@ const modelsData =
         }
     },
     {
-        id: "model-02",
+        id: "Mococo_Abyssgard",
         name: "Mococo Abyssgard",
         category: "HoloParty",
         desc: "Unofficial Mococo Abyssgard - from Hololive. HoloParty 3D Model.",
+        about: "This model was created as a Holoparty 3D asset.",
         sketchfab: "https://sketchfab.com/M-erm",
         images: 
         {
@@ -227,6 +238,7 @@ const modelsData =
         name: "Shiori Novella",
         category: "HoloParty",
         desc: "Unofficial Shiori Novella - from Hololive. HoloParty 3D Model.",
+        about: "This model was created as a Holoparty 3D asset.",
         sketchfab: "https://sketchfab.com/M-erm",
         images: 
         {
@@ -242,6 +254,7 @@ const modelsData =
         name: "Koseki Bijou",
         category: "HoloParty",
         desc: "Unofficial Koseki Bijou - from Hololive. HoloParty 3D Model.",
+        about: "This model was created as a Holoparty 3D asset.",
         sketchfab: "https://sketchfab.com/M-erm",
         images: 
         {
@@ -257,6 +270,7 @@ const modelsData =
         name: "PlaceHolder",
         category: "HoloParty",
         desc: "Unofficial PlaceHolder - from Hololive. HoloParty 3D Model.",
+        about: "This model was created as a Holoparty 3D asset.",
         sketchfab: "https://sketchfab.com/M-erm",
         images: 
         {
@@ -272,6 +286,7 @@ const modelsData =
         name: "PlaceHolder",
         category: "HoloParty",
         desc: "Unofficial PlaceHolder - from Hololive. HoloParty 3D Model.",
+        about: "This model was created as a Holoparty 3D asset.",
         sketchfab: "https://sketchfab.com/M-erm",
         images: 
         {
@@ -287,6 +302,7 @@ const modelsData =
         name: "Evil Neuro",
         category: "Miscellaneous",
         desc: "Unofficial Evil Neuro. Evil: Neuro's Betrayal 3D Model.",
+        about: "This model was created as a Evil: blablabla 3D asset.",
         sketchfab: "https://sketchfab.com/M-erm",
         images: 
         {
@@ -305,14 +321,14 @@ const pages = document.querySelectorAll("main > section");
 const main_page = document.getElementById('homepage');
 
 
-window.addEventListener("popstate", () => //Faz com que a seta de voltar FUNCIONE
+window.addEventListener("popstate", () => // Setas do browser
 {
     Navigate(window.location.pathname.replace(BASE_PATH, "")); //Pega o path da URL atual, remove a primeira parte e chama navigate
 });
 
 document.addEventListener("click", (click) =>
 {
-    const link = click.target.closest("a[data-route]"); // Retorna um link completo
+    const link = click.target.closest("a[data-route]"); // obs: Retorna um link completo
     if (!link) return;
 
     click.preventDefault();
@@ -321,22 +337,33 @@ document.addEventListener("click", (click) =>
     Navigate(path);
 })
 
-function Navigate(path) // Remove página atual, cria nova
+function Navigate(path)
 {
     path = path || ""; // Outra forma de dizer: If null = ""
-    path = path.replace(/^\/+/, ""); // Limpa as barras
+    path = path.replace(/^\/+/, ""); // Regex escroto (Se achar / -> (,) limpa -> "" )
 
-    const fullUrl = path ? `${BASE_PATH}/${path}` : BASE_PATH; // Tem path? se sim, monta url com path, se não, sem path
-    
-    if (window.location.pathname !== fullUrl){ 
-        history.pushState({},"", fullUrl);
+    const parts = path.split("/");
+
+    if (parts[0] === "en" || parts[0] === "pt-br")
+    {
+        currentLanguage = parts[0];
+        parts.shift();
+        path = parts.join("/");
     }
 
-    const parts = path.split("/"); // Divide o pageId em base e id
-    const base = parts[0] || "";
-    const id = parts[1] || null;
+    const pathWithLang = currentLanguage + "/" + path  || "";
+    const fullUrl = `${BASE_PATH}/${pathWithLang}`;
+    
+    if (window.location.pathname !== fullUrl) // <-- Só muda URL real se for diferente da URL do código
+    {
+        history.pushState({},"", fullUrl);
+    }
+    
+    const pathparts = path.split("/"); // Divide o pageId em base e id
+    const base = pathparts[0] || "";
+    const id = pathparts[1] || null;
 
-    if (base ==="")  // Dá valor ao pageId de acordo com o valor recebido. Útil para dar o page-hidden depois
+    if (base ==="")  // Dá valor ao pageId de acordo com o valor recebido. Útil para ativar página
         pageId = "homepage";
     else if (base ==="projects")
         pageId = id ? "project-view" : "projects"; 
@@ -347,8 +374,7 @@ function Navigate(path) // Remove página atual, cria nova
     else if (base ==="animations")
         pageId = "animations";
 
-
-    pages.forEach(page =>
+    pages.forEach(page => // Esconde todas as páginas 
     {
         page.classList.remove('page-active');
         page.classList.add('page-hidden');
@@ -359,13 +385,13 @@ function Navigate(path) // Remove página atual, cria nova
 
     const target = document.getElementById(pageId);
 
-    if (target) 
+    if (target) // Ativa página target
     {
         target.classList.remove('page-hidden');
         target.classList.add('page-active');
     }
 
-    if (base === "projects")  // SE tiver ID, vai pro project/model-view.
+    if (base === "projects")
     {
         if (id)
             Load_Details_Project(id);
@@ -379,9 +405,11 @@ function Navigate(path) // Remove página atual, cria nova
         else
             Load_Models();
     }
+
+    ChangeLanguageHTML();
 }
 
-function Load_Projects() // Cria um card de projeto no html para cada projeto
+function Load_Projects()
 {
     const projects = // Array 
     {
@@ -393,7 +421,8 @@ function Load_Projects() // Cria um card de projeto no html para cada projeto
 
     const cards = document.querySelectorAll(".card-project");
 
-    cards.forEach(card => {
+    cards.forEach(card => 
+    {
         card.remove();
     });
 
@@ -415,14 +444,13 @@ function Load_Projects() // Cria um card de projeto no html para cada projeto
     });
 }
 
-function Load_Models() // Pega os grids do HTML; cria uma função molde pra evitar repetição; Filtra: Valor de Model.category comparado com nome da Chave Category e chama func.
+function Load_Models() // Filtra: Valor de Model.category comparado com nome da Chave Category e chama func
 {
     const models = //Array
     {
         HoloParty: document.querySelector('#models-holoparty .models-grid'),
         Miscellaneous: document.querySelector("#models-misc .models-grid")
     }
-
     
     const cards = document.querySelectorAll(".card-model");
 
@@ -438,8 +466,8 @@ function Load_Models() // Pega os grids do HTML; cria uma função molde pra evi
                         <figure>
                             <img src="${model.images.posed}" alt="${model.name} Preview">
                         </figure>
+                        <div class="model-name">${model.name}</div>
                     </div>
-                    <div class="model-name">${model.name}</div>
                 </a>
             </li>
         `;
@@ -457,7 +485,6 @@ function Load_Models() // Pega os grids do HTML; cria uma função molde pra evi
 function Load_Details_Project(id)
 {
     const projectInfo = document.getElementById("project-view");
-    projectInfo.innerHTML = "";
 
     const project = projectsData.find((project) => project.id === id);
 
@@ -468,12 +495,13 @@ function Load_Details_Project(id)
     }
 
     const project_view = `
-        <div id="project-view-container" class="background-bar">
+        <div id="project-view-container">
             <div id="project-panel">
                 <section id="project-info">
-                    <div class="desc">About: ${project.desc} </div>
-                    <div>Techs: ${project.techs} </div>
-                    <a href="${project.link}" class="contacts">Github</a>
+                    <div>Stats: ${project.stats} </div>
+                    <div id="desc">${project.desc}</div>
+                    <div id="techs">Techs: ${project.techs} </div>
+                    <a href="${project.link}" id="github"><h1>Github</h1></a>
                 </section>
                 <section id="right-project-info">
                     <div class="project-title"> ${project.title} </div>
@@ -495,7 +523,6 @@ function Load_Details_Project(id)
 function Load_Details_Models(id)
 {
     const modelInfo = document.getElementById("model-view");
-    modelInfo.innerHTML = "";
 
     const model = modelsData.find((model) => model.id === id)
 
@@ -512,7 +539,7 @@ function Load_Details_Models(id)
             </section>
             <div class="twod-model">
                 <img src=${model.images.posed} alt=${model.name}>
-                <button class= "view-3d-model" onclick="window.open('')">3D</button>  
+                <button class= "view-3d-model">3D</button>
             </div>
             <section id="model-info">
                 <div class="model-info-name">${model.name}</div>
@@ -526,28 +553,36 @@ function Load_Details_Models(id)
     modelInfo.innerHTML = model_view;
 }
 
-let currentLanguage = "en";
-
-function changeURLLanguage(targetLanguage) // ?????????? 
+function ChangeLanguage(targetLanguage)
 {
     currentLanguage = targetLanguage;
+    
+    const fullPath = window.location.pathname;
+    let currentPath = fullPath.replace(BASE_PATH + "/", "");    
 
-    Navigate();
-}
+    if (currentPath.startsWith("en/") || currentPath.startsWith("pt-br/"))
+    {
+        currentPath = currentPath.split("/").slice(1).join("/");
+    }
 
-function changeSiteLanguage()
+    const newPath = targetLanguage + "/" + currentPath;
+
+    Navigate(newPath);
+ }
+
+function ChangeLanguageHTML() 
 {
-    const words = document.querySelectorAll("[data-i18n]");
+    const words = document.querySelectorAll("[data-i18n]"); 
 
     words.forEach(word =>
     {
-        const key = word.getAttribute("data-i18n");
-        if (translations[currentLanguage] && translations[currentLanguage][key])
+        const value = word.getAttribute("data-i18n");
+        if (translations[currentLanguage] && translations[currentLanguage][value])
         {
-            word.textContent = translations[currentLanguage][key];
+            word.textContent = translations[currentLanguage][value]
         }
     });
-}
+ }
 
 // Aparentemente só funciona localmente
 window.addEventListener("DOMContentLoaded", () => {
