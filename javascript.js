@@ -458,7 +458,7 @@ function Load_Projects()
 
     function createProjectCard(project) {
         return `
-            <a href="${BASE_PATH}projects/${project.id}" class="card-project" data-route>
+            <a href="projects/${project.id}" class="card-project" data-route>
                 <img src="${project.images.card}" alt="${project.title} Preview">
                 <h3>${project.title} </h3>
             </a>
@@ -585,18 +585,6 @@ function Load_Details_Models(id)
                 </div>
             </div>
 
-            // <div id="threed-view" style="display: none;">
-            // <button class="view-3d-model" onclick="Toggle2D()">2D</button>
-            //     <model-viewer
-            //         src="${model.model3d}"
-            //         alt="${model.name} 3D Model"
-            //         auto-rotate
-            //         camera-controls
-            //         shadow-intensity="1"
-            //         style="width: 100%; height: 600px;">
-            //     </model-viewer>
-            // </div>
-
             <section id="model-info">
                 <div class="model-info-name">${model.name}</div>
                 <div class="model-info-desc">${model.desc}</div>
@@ -620,18 +608,6 @@ function ChangeDisplayImage(newimage)
 {
     const displayImage = document.getElementById("display-image");
     displayImage.src = newimage;
-}
-
-function Toggle3D()
-{
-    document.getElementById("twod-view").style.display = "none";
-    document.getElementById("threed-view").style.display = "block";
-}
-
-function Toggle2D()
-{
-    document.getElementById("twod-view").style.display = "flex";
-    document.getElementById("threed-view").style.display = "none";
 }
 
 function ChangeLanguage(targetLanguage)
