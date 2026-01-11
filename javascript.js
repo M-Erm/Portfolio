@@ -260,7 +260,7 @@ const modelsData =
         }
     },
     {
-        id: "model-03",
+        id: "Shiori_Novella",
         name: "Shiori Novella",
         category: "HoloParty",
         desc: "Unofficial Shiori Novella - from Hololive. HoloParty 3D Model.",
@@ -277,7 +277,7 @@ const modelsData =
         }
     },
     {
-        id: "model-04",
+        id: "Koseki_Bijou",
         name: "Koseki Bijou",
         category: "HoloParty",
         desc: "Unofficial Koseki Bijou - from Hololive. HoloParty 3D Model.",
@@ -294,41 +294,7 @@ const modelsData =
         }
     },
     {
-        id: "model-05",
-        name: "PlaceHolder",
-        category: "HoloParty",
-        desc: "Unofficial PlaceHolder - from Hololive. HoloParty 3D Model.",
-        about: "This model was created as a Holoparty 3D asset.",
-        model3d: "/Portfolio/models/mococo_abyssgard.glb",
-        sketchfab: "https://sketchfab.com/M-erm",
-        images: 
-        {
-            posed: "/Portfolio/img/placeholder/placeholder-posed.png",
-            img1: "/Portfolio/img/placeholder/placeholder-1.png",
-            img2: "/Portfolio/img/placeholder/placeholder-2.png",
-            img3: "/Portfolio/img/placeholder/placeholder-3.png",
-            img4: "/Portfolio/img/placeholder/placeholder-4.png",
-        }
-    },
-    {
-        id: "model-06",
-        name: "PlaceHolder",
-        category: "HoloParty",
-        desc: "Unofficial PlaceHolder - from Hololive. HoloParty 3D Model.",
-        about: "This model was created as a Holoparty 3D asset.",
-        model3d: "/Portfolio/models/mococo_abyssgard.glb",
-        sketchfab: "https://sketchfab.com/M-erm",
-        images: 
-        {
-            posed: "/Portfolio/img/placeholder/placeholder-posed.png",
-            img1: "/Portfolio/img/placeholder/placeholder-1.png",
-            img2: "/Portfolio/img/placeholder/placeholder-2.png",
-            img3: "/Portfolio/img/placeholder/placeholder-3.png",
-            img4: "/Portfolio/img/placeholder/placeholder-4.png",
-        }
-    },
-    {
-        id: "model-07",
+        id: "Evil_Neuro",
         name: "Evil Neuro",
         category: "Miscellaneous",
         desc: "Unofficial Evil Neuro. Evil: Neuro's Betrayal 3D Model.",
