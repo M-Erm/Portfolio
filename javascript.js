@@ -248,7 +248,7 @@ const modelsData =
         category: "HoloParty",
         desc: "Unofficial Mococo Abyssgard - from Hololive. HoloParty 3D Model.",
         about: "This model was created as a Holoparty 3D asset.",
-        model3d: "/models/mococo_abyssgard.glb",
+        model3d: "/Portfolio/models/mococo_abyssgard.glb",
         sketchfab: "https://sketchfab.com/M-erm",
         images: 
         {
