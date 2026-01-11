@@ -485,8 +485,7 @@ figure img {
 #model-view.page-active {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-    padding-top: 25vh;
+
 }
 
 #model-view-container {
@@ -495,9 +494,7 @@ figure img {
     height: 50vh;
     gap: 10%;
     background-color: #D3D3D3;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 10vh;
+
 }
 
 #twod-view {
@@ -508,13 +505,7 @@ figure img {
     align-items: center;
 }
 
-#threed-view {
-    width: 60%;
-    min-height: 600px;
-    background: #A1A1A1;
-    border-radius: 10px;
-    padding: 20px;
-}
+
 
 #model-images {
     width: clamp(3%, 10%, 30%);
@@ -546,19 +537,6 @@ figure img {
     object-fit: contain;
 }
 
-.view-3d-model {
-    position: absolute;
-    z-index: 10;
-    margin: 1%;
-    width: fit-content;
-    height: fit-content;
-    padding: 6px 16px;
-    border-radius: 5px;
-    background-color: #1F1F1F;
-    color: white;
-    font-size: 14px;
-    cursor: pointer;
-}
 
 #model-info {
     display: flex;

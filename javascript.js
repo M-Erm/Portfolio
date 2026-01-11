@@ -235,11 +235,11 @@ const modelsData =
         sketchfab: "https://sketchfab.com/M-erm",
         images: 
         {
-            posed: "/Portfolio/img/fuwawa/fuwawa-posed.png",
-            img1: "/Portfolio/img/fuwawa/fuwawa-1.png",
-            img2: "/Portfolio/img/fuwawa/fuwawa-2.png",
-            img3: "/Portfolio/img/fuwawa/fuwawa-3.png",
-            img4: "/Portfolio/img/fuwawa/fuwawa-4.png",
+            posed: "img/fuwawa/fuwawa-posed.png",
+            img1: "img/fuwawa/fuwawa-1.png",
+            img2: "img/fuwawa/fuwawa-2.png",
+            img3: "img/fuwawa/fuwawa-3.png",
+            img4: "img/fuwawa/fuwawa-4.png",
         }
     },
     {
@@ -382,11 +382,9 @@ function Navigate(path)
         history.pushState({},"", fullUrl);
     }
     
-    const pathparts = path.split("/"); // Divide o path em base e id
+    const pathparts = path.split("/"); // Divide o path em base e id 
     const base = pathparts[0] || "";
     const id = pathparts[1] || null;
-
-    let pageId;
 
     if (base ==="")  // Dá valor ao pageId de acordo com o valor recebido. Útil para ativar página
         pageId = "homepage";
@@ -398,11 +396,6 @@ function Navigate(path)
         pageId = "contact";
     else if (base ==="animations")
         pageId = "animations";
-    else 
-    {
-        console.warn("Página não reconhecida", base)
-        pageId = "homepage";
-    }
 
     pages.forEach(page => // Esconde todas as páginas 
     {
